@@ -1,2 +1,2 @@
-# nvim
-Neovim Config
+# 我的**Neovim**配置
+
