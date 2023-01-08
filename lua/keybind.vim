@@ -15,6 +15,7 @@ nnoremap < <<
 nnoremap > >>
 
 noremap ; :
+noremap ；:
 
 " Faster in-line navigation
 noremap W 5w
@@ -63,7 +64,7 @@ map th :-tabnext<CR>
 
 map <LEADER><leader>s :e ~/.config/nvim/ <CR>
 nmap R :RnvimrToggle<CR>
-map rr :source $MYVIMRC<CR>
+" map rr :source $MYVIMRC<CR>
 map <LEADER>i <c-]>
 map <LEADER>o <c-o>
 

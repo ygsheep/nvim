@@ -1,68 +1,31 @@
--- examples for your init.lua
-require('onedark').setup {
-  style = 'cool'
-}
-require('onedark').load()
+-- 不可见字符的显示，这里只把空格显示为一个点
+-- vim.o.list = true
+-- vim.o.listchars = "space:·"
+-- 补全增强
+vim.o.wildmenu = true
+-- utf8
+vim.g.encoding = "UTF-8"
+vim.o.fileencoding = 'utf-8'
+-- jk移动时光标下上方保留8行
+vim.o.scrolloff = 8
+vim.o.sidescrolloff = 8
+-- 使用相对行号
+vim.wo.number = true
+vim.wo.relativenumber = true
+-- 高亮所在行
+vim.wo.cursorline = true
+-- 显示左侧图标指示列
+vim.wo.signcolumn = "yes"
+-- 右侧参考线，超过表示代码太长了，考虑换行
+--vim.wo.colorcolumn = "80"
+vim.opt.wrap = false
 
--- 参考线设置
-vim.opt.termguicolors = true
-vim.cmd [[highlight IndentBlanklineIndent1 guibg=#1f1f1f gui=nocombine]]
-vim.cmd [[highlight IndentBlanklineIndent2 guibg=#1a1a1a gui=nocombine]]
-vim.opt.list = true
-vim.opt.listchars:append "eol:↴"
-require("indent_blankline").setup {
-  show_current_context = true,
-  char = "",
-  show_current_context_start = true,
-  char_highlight_list = {
-    "IndentBlanklineIndent1",
-    "IndentBlanklineIndent2",
-  },
-  space_char_highlight_list = {
-    "IndentBlanklineIndent1",
-    "IndentBlanklineIndent2",
-  },
-  show_trailing_blankline_indent = false,
-}
+vim.api.nvim_command(":filetype plugin on")
 
--- disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+-- 括号
 
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
 
--- empty setup using defaults
-require("nvim-tree").setup{
-  -- 关闭文件时自动关闭
-  auto_close = true,
-  -- 不显示 git 状态图标
-  git = {
-    enable = false
-  },
-}
---  bind  key
-vim.cmd('map tt :NvimTreeToggle<CR>')
--- tap
-vim.opt.termguicolors = true
-require("bufferline").setup {
-  options = {
-    -- 使用 nvim 内置lsp
-    diagnostics = "nvim_lsp",
-    -- 左侧让出 nvim-tree 的位置
-    offsets = {{
-      filetype = "NvimTree",
-      text = "File Explorer",
-      highlight = "Directory",
-      text_align = "left"
-    }}
-  }
-}
 
-vim.cmd [[
-  map th :BufferLineCyclePrev<CR>
-  map tl :BufferLineCycleNext<CR> 
-]]
 require'nvim-treesitter.configs'.setup {
   -- 安装 language parser
   -- :TSInstallInfo 命令查看支持的语言
@@ -114,7 +77,7 @@ vim.cmd("map <LEADER>fg gg=G")
 vim.cmd("noremap <LEADER>[ zc")
 vim.cmd("noremap <LEADER>] zo")
 
--- 翻译配置A
+-- 翻译配置
 vim.cmd [[
   let g:translator_target_lang = 'zh'
   let g:translator_source_lang = 'auto'

@@ -1,5 +1,3 @@
-for f in split(glob("~/.config/nvim/settings/*.vim","\n"))
+for f in split(glob("~/.config/nvim/nvim/*.vim","\n"))
     exe 'source' f
 endfor
-colorscheme snazzy
-colorscheme one
