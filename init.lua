@@ -7,8 +7,14 @@ vim.cmd("source ~/.config/nvim/lua/config.vim")
 
 require("init-packer")
 require("init-config")
+require("init-keybind")
 require("init-theme")
-require("init-coc")
-require("init-lsp")
-require("init-lspui")
+require("which")
+-- LSP config
+require("lsp.setup")
+require("lsp.config")
+require("lsp.ui")
+require("lsp.theme")
+require("lsp.cmp")
+
 

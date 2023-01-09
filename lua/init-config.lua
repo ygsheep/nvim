@@ -82,10 +82,10 @@ vim.cmd [[
   let g:translator_target_lang = 'zh'
   let g:translator_source_lang = 'auto'
   let g:translator_default_engines = ['youdao','bing']
-  nmap <silent> <Leader>t <Plug>Translate
-  vmap <silent> <Leader>t <Plug>TranslateV
-  nmap <silent> <Leader>w <Plug>TranslateW
-  vmap <silent> <Leader>w <Plug>TranslateWV
+  nmap <silent> <Leader>tt <Plug>Translate
+  vmap <silent> <Leader>tv <Plug>TranslateV
+  nmap <silent> <Leader>fy <Plug>TranslateW
+  vmap <silent> <Leader>fy <Plug>TranslateWV
   nmap <silent> <Leader>r <Plug>TranslateR
   vmap <silent> <Leader>r <Plug>TranslateRV
   nmap <silent> <Leader>x <Plug>TranslateX

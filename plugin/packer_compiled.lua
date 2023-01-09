@@ -121,10 +121,21 @@ _G.packer_plugins = {
     path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/fzf-lsp.nvim",
     url = "https://github.com/gfanto/fzf-lsp.nvim"
   },
+  ["gitsigns.nvim"] = {
+    config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
+    loaded = true,
+    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["goto-preview"] = {
     loaded = true,
     path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/goto-preview",
     url = "https://github.com/rmagatti/goto-preview"
+  },
+  ["guihua.lua"] = {
+    loaded = true,
+    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/guihua.lua",
+    url = "https://github.com/ray-x/guihua.lua"
   },
   ["headlines.nvim"] = {
     loaded = true,
@@ -136,10 +147,40 @@ _G.packer_plugins = {
     path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["litee-bookmarks.nvim"] = {
+    loaded = true,
+    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/litee-bookmarks.nvim",
+    url = "https://github.com/ldelossa/litee-bookmarks.nvim"
+  },
+  ["litee-filetree.nvim"] = {
+    loaded = true,
+    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/litee-filetree.nvim",
+    url = "https://github.com/ldelossa/litee-filetree.nvim"
+  },
+  ["litee-symboltree.nvim"] = {
+    loaded = true,
+    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/litee-symboltree.nvim",
+    url = "https://github.com/ldelossa/litee-symboltree.nvim"
+  },
+  ["litee.nvim"] = {
+    loaded = true,
+    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/litee.nvim",
+    url = "https://github.com/ldelossa/litee.nvim"
+  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
+  },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
   },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
@@ -179,11 +220,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/nvim-lspinstall",
-    url = "https://github.com/anott03/nvim-lspinstall"
   },
   ["nvim-navic"] = {
     loaded = true,
@@ -236,6 +272,7 @@ _G.packer_plugins = {
     url = "https://github.com/simrat39/symbols-outline.nvim"
   },
   ["toggleterm.nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0" },
     loaded = true,
     path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
@@ -250,6 +287,11 @@ _G.packer_plugins = {
     path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/vimcdoc",
     url = "https://github.com/yianwillis/vimcdoc"
   },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/yysheep/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
+  },
   ["windline.nvim"] = {
     config = { "\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20wlsample.vscode\frequire\0" },
     loaded = true,
@@ -259,14 +301,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-autopairs
-time([[Config for nvim-autopairs]], true)
-try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
-time([[Config for nvim-autopairs]], false)
 -- Config for: windline.nvim
 time([[Config for windline.nvim]], true)
 try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20wlsample.vscode\frequire\0", "config", "windline.nvim")
 time([[Config for windline.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: gitsigns.nvim
+time([[Config for gitsigns.nvim]], true)
+try_loadstring("\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0", "config", "gitsigns.nvim")
+time([[Config for gitsigns.nvim]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-web-devicons ]]
