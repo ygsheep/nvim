@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/yysheep/.config/nvim/test/cmake_build_Debug",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/project.dir/main.cpp.o -c /home/yysheep/.config/nvim/test/main.cpp",
+  "file": "/home/yysheep/.config/nvim/test/main.cpp"
+}
+]

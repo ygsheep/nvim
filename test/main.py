@@ -1,6 +1,17 @@
-import os   
-import tkinter as tk
+from typing import *
+
+def febonacce(k:int)-> Generator[int,None,None]:
+    """
+    @return List[int,...]
+    """
+    a:int = 1
+    b:int = 1
+    for _ in range(k):
+        yield a
+        a , b = b , a+b
+
 
 if __name__ == "__main__":
-    print("Hello word")
-    print(os.getcwd())
+    for _ in febonacce(100):
+        sum = _
+    print(f"{sum}")

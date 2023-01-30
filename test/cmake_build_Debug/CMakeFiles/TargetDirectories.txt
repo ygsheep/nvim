@@ -1,0 +1,3 @@
+/home/yysheep/.config/nvim/test/cmake_build_Debug/CMakeFiles/project.dir
+/home/yysheep/.config/nvim/test/cmake_build_Debug/CMakeFiles/edit_cache.dir
+/home/yysheep/.config/nvim/test/cmake_build_Debug/CMakeFiles/rebuild_cache.dir

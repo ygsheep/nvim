@@ -1,20 +1,21 @@
--- init.lua config
 
--- 导入按键配置
-vim.cmd("source ~/.config/nvim/lua/keybind.vim")
--- nvim设置
-vim.cmd("source ~/.config/nvim/lua/config.vim")
+-- import config
+require("user/options")
+require("user/keymaps")
 
-require("init-packer")
-require("init-config")
-require("init-keybind")
-require("init-theme")
-require("which")
--- LSP config
-require("lsp.setup")
-require("lsp.config")
-require("lsp.ui")
-require("lsp.theme")
-require("lsp.cmp")
+-- instaing PLugin
+require("setup")
+-- ------------- 插件 ----------------------
+require("core.conf")
+-- lsp 补全
+require("lsp/lsp")
+require("cmp.conf")
 
+
+-- Debug
+require("dap.dap")
+-- other --
+require("dap.sniprun")
+require("dap.cmake-tools")
+require("dap.gdb")
 

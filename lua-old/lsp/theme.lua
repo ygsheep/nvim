@@ -1,9 +1,8 @@
-
-
 -- Configure lsp information display style
-local M = {}
 
-M.setup = function()
+local theme = {}
+
+theme.setup = function()
   -- replace the lsp info symbol
   local signs = {
     { name = "DiagnosticSignError", text = "" },
@@ -11,11 +10,9 @@ M.setup = function()
     { name = "DiagnosticSignHint", text = "" },
     { name = "DiagnosticSignInfo", text = "" },
   }
-
   for _, sign in ipairs(signs) do
     vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
   end
-
   -- set the style of lsp info
   local config = {
     -- disable virtual text
@@ -39,7 +36,6 @@ M.setup = function()
   }
 
   vim.diagnostic.config(config)
-
   -- set the popup window border
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     border = "rounded",
@@ -50,4 +46,4 @@ M.setup = function()
   })
 end
 
-return M
+theme.setup()
