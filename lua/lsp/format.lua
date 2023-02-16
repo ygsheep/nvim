@@ -37,11 +37,13 @@ prettier.setup({
 	bin = 'prettier', -- or `'prettierd'` (v0.22+)
 	filetypes = {
 		"css",
+		"cpp",
 		"graphql",
 		"html",
 		"javascript",
 		"javascriptreact",
 		"json",
+		"python",
 		"less",
 		"markdown",
 		"scss",

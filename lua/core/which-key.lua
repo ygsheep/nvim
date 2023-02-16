@@ -20,6 +20,7 @@ wk.register({
 		L = { "<c-w>l", "右移" },
 		r = { "<Plug>TranslateR", "终端翻译" },
 		x = { "<Plug>TranslateX", "终端翻译" },
+		e = { "<cmd>Neotree<CR>", "目录" },
 	},
 	["<leader>f"] = {
 		name = "+file",

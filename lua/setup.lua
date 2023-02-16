@@ -58,7 +58,7 @@ require("lazy").setup({
 	-- file search
 	'nvim-telescope/telescope.nvim',
 	-- tree
-	{ "nvim-neo-tree/neo-tree.nvim", lazy = false },
+	"nvim-neo-tree/neo-tree.nvim",
 	-- color theme
 	'navarasu/onedark.nvim',
 	'Mofiqul/vscode.nvim',
@@ -92,7 +92,7 @@ require("lazy").setup({
 	'hrsh7th/cmp-buffer',
 	'hrsh7th/cmp-path',
 	'hrsh7th/cmp-cmdline',
-	{ 'tzachar/cmp-tabnine', build = './install.sh' },
+	{ 'tzachar/cmp-tabnine', build = 'bash install.sh' },
 
 	-- debug
 	'mfussenegger/nvim-dap',
@@ -113,5 +113,6 @@ require("lazy").setup({
 	'voldikss/vim-translator', -- 翻译
 	"potamides/pantran.nvim", -- translator
 
-
+	-- COC补全
+	{ 'neoclide/coc.nvim', branch='release'}
 })

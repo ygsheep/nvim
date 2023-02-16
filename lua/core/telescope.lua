@@ -7,3 +7,17 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})  -- 环境里要安装ripgrep
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+require('telescope').setup{
+  defaults = {
+    -- ...
+  },
+  pickers = {
+    find_files = {
+      theme = "dropdown",
+    }
+  },
+  extensions = {
+    -- ...
+  }
+}

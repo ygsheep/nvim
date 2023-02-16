@@ -14,7 +14,7 @@ require("mason").setup({
 local servers = {
 	'rust_analyzer',
 	'tsserver',
-	"sumneko_lua",
+	-- "sumneko_lua",
 	"clangd",
 	"pyright",
 	"cmake"
@@ -27,9 +27,9 @@ require("mason-lspconfig").setup {
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-require("lspconfig").sumneko_lua.setup {
-	capabilities = capabilities,
-}
+-- require("lspconfig").sumneko_lua.setup {
+-- 	capabilities = capabilities,
+-- }
 
 
 require("lspconfig").cmake.setup {
