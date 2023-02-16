@@ -7,7 +7,7 @@
 ```bash
 sudo pacman -S neovim python3 nodejs npm ripgrep fzf
 
-pip3 install neovim
+pip3 install pynvim
 
 npm i neovim -g
 # C++ 编译与调试
