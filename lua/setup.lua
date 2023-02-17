@@ -108,11 +108,13 @@ require("lazy").setup({
 	-- 更好的操作
 	'dominikduda/vim_current_word', -- 高亮当前单词	
 	'ggandor/leap.nvim', -- 移动插件
+	'rhysd/accelerated-jk', -- 加速移动jk
 	'ggandor/flit.nvim',
 	'Pocco81/auto-save.nvim', -- 自动保存
-
+  'mbbill/undotree', --撤销插件
 	'voldikss/vim-translator', -- 翻译
 	"potamides/pantran.nvim", -- translator
+  'yianwillis/vimcdoc', --中文文档
 
 	-- COC补全
 	{ 'neoclide/coc.nvim', branch='release'}

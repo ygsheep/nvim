@@ -20,6 +20,7 @@ sudo pacman -S gcc cmake make gdb clang
 
 Tree 文件结构
 ```bash
+
 .
 ├── init.lua
 ├── lazy-lock.json
@@ -41,6 +42,7 @@ Tree 文件结构
 │   │   ├── neo-tree.lua
 │   │   ├── nvim-colorizer.lua
 │   │   ├── nvim-notify.lua
+│   │   ├── other.lua
 │   │   ├── telescope.lua
 │   │   ├── theme.lua
 │   │   ├── todo-comments.lua
@@ -95,8 +97,7 @@ Tree 文件结构
     ├── main.cpp
     └── main.py
 
-11 directories, 63 files
-
+11 directories, 64 files
 ```
 
 ## 插件列表

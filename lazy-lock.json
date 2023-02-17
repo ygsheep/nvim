@@ -1,6 +1,7 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "418d3117dab2f54c4340ea73e0070dd78fc81753" },
   "LuaSnip": { "branch": "master", "commit": "58fbfc627a93281a77f7d161d4ff702e639677b1" },
+  "accelerated-jk": { "branch": "master", "commit": "156c5158b72059404f6b8aaf15b59f87dd0aaa88" },
   "alpha-nvim": { "branch": "main", "commit": "d35b99e36e32040ba06c48a25b5bd3e75be2a566" },
   "auto-save.nvim": { "branch": "main", "commit": "979b6c82f60cfa80f4cf437d77446d0ded0addf0" },
   "bufferline.nvim": { "branch": "main", "commit": "84b0822b2af478d0b4f7b0f9249ca218855331db" },
@@ -49,8 +50,10 @@
   "sniprun": { "branch": "master", "commit": "6511fd71e751ed80ea374ef096ec5187682241cd" },
   "telescope.nvim": { "branch": "master", "commit": "203bf5609137600d73e8ed82703d6b0e320a5f36" },
   "todo-comments.nvim": { "branch": "main", "commit": "74c7d28cb50b0713c881ef69bcb6cdd77d8907d1" },
+  "undotree": { "branch": "master", "commit": "b6fdb95db53b7ceb23ddfe8a8211a3135d98eef0" },
   "vim-translator": { "branch": "master", "commit": "681c6b2f650b699572e6bb55162a3d6e62ee5d43" },
   "vim_current_word": { "branch": "master", "commit": "961d54dd53a1da7a9402dc92098a8a8c75d79ac6" },
+  "vimcdoc": { "branch": "master", "commit": "e134d0313b615bc5bc94e6fc7b35f90c3f46c49f" },
   "vscode.nvim": { "branch": "main", "commit": "db9ee339b5556aa832ca58871fd18f9467a18520" },
   "which-key.nvim": { "branch": "main", "commit": "5224c261825263f46f6771f1b644cae33cd06995" },
   "zephyr-nvim": { "branch": "main", "commit": "7fd86b7164442d3b5ec2c81b2694d040e716b5cf" }
