@@ -25,6 +25,4 @@ require("core.nvim-notify")
 require("core.gitsigns")
 require("core.autosave")
 require("core.leap")
-
-
-
+require("core.other")

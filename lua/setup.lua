@@ -105,7 +105,8 @@ require("lazy").setup({
 	'Civitasv/cmake-tools.nvim',
 
 	'lewis6991/gitsigns.nvim',
-
+	-- 更好的操作
+	'dominikduda/vim_current_word', -- 高亮当前单词	
 	'ggandor/leap.nvim', -- 移动插件
 	'ggandor/flit.nvim',
 	'Pocco81/auto-save.nvim', -- 自动保存

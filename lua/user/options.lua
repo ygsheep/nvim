@@ -41,6 +41,7 @@ opt.mouse:append("a")
 -- 系统剪切板
 opt.clipboard:append("unnamedplus")
 
+
 -- 外观
 opt.termguicolors = true
 opt.signcolumn = "yes"
