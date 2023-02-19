@@ -218,9 +218,10 @@ require("lazy").setup({
 
 翻译
 
-| KEY  |      |
+使用`<LEADER>`+ KEY 
+| KEY  | Translator     |
 | :--: | :--: |
-|  fy  |      |
-|      |      |
+|  fy  | 窗口翻译     |
+|  r    | 终端翻译     |
 |      |      |
 

@@ -10,8 +10,6 @@ require("core.conf")
 -- lsp 补全
 require("lsp/lsp")
 require("cmp.conf")
-
-
 -- Debug
 require("dap.dap")
 -- other --

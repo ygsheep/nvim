@@ -11,6 +11,12 @@ keymap.set("i","jk","<ESC>")
 keymap.set("v","J",":m '>+1<CR>gv=gv")
 keymap.set("v","K",":m '>-2<CR>gv=gv")
 
+-- 首尾移动
+keymap.set({"n","v"},"H","0")
+keymap.set({"n","v"},"L","$")
+
+keymap.set("n","dH","d0")
+keymap.set("n","dL","d$")
 -- ----- 正常模式 -----
 -- 窗口
 keymap.set("n","<leader>sv","<C-w>v") -- 水平新建窗口
@@ -25,7 +31,9 @@ keymap.set("n","<right>",":vertical resize+5<CR>")
 
 keymap.set("n",";",":")
 keymap.set("n","S",":w<CR>")
-keymap.set("n","<leader><leader>s",":e ~/.config/nvim/<CR>")
+keymap.set("n",">",">>")
+keymap.set("n","<","<<")
+keymap.set("n","<leader><leader>","<ESC>/<++><CR>:nohlsearch<CR>c4l")
 
 -- 取消高亮
 keymap.set('n','<leader>nh',':nohl<CR>')

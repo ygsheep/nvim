@@ -30,7 +30,7 @@ wk.register({
 		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 		h = { "<cmd>Telescope help_tags<cr>", "help" },
 		t = { "<cmd>Neotree toggle<CR>", "Tree" },
-		y = { "<Plug>TranslateW", "翻译" }
+		y = { "<Plug>TranslateW", "窗口翻译" }
 	},
 	["<LEADER>c"] = {
 		name = "+Code"

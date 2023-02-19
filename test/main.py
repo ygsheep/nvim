@@ -9,9 +9,14 @@ def febonacce(k:int)-> Generator[int,None,None]:
     for _ in range(k):
         yield a
         a , b = b , a+b
+class Generator():
+    def __init__(self):
+        pass
+
 
 
 if __name__ == "__main__":
     for _ in febonacce(100):
         sum = _
     print(f"{sum}")
+

@@ -93,7 +93,7 @@ cmp.setup{
         end
       end
     }),
-    ['<C-p>'] = cmp.mapping({
+    ['<C-e>'] = cmp.mapping({
       c = function()
         if cmp.visible() then
           cmp.select_prev_item({ behavior = cmp.SelectBehavior.Select })

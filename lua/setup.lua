@@ -79,9 +79,21 @@ require("lazy").setup({
 
 
 	-- cmp 补全
-	'hrsh7th/nvim-cmp', -- Autocompletion plugin
-	'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
-	'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+	{
+		'hrsh7th/nvim-cmp', -- Autocompletion plugin
+		-- load cmp on InsertEnter
+		event = "InsertEnter",
+		-- these dependencies will only be loaded when cmp loads
+		-- dependencies are always lazy-loaded unless specified otherwise
+		dependencies = {
+			'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+			'hrsh7th/cmp-buffer',
+			'hrsh7th/cmp-path',
+			'hrsh7th/cmp-cmdline',
+			'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
+			{ 'tzachar/cmp-tabnine', build = 'bash install.sh' },
+		},
+  },
 	{
 		"L3MON4D3/LuaSnip",
 		-- follow latest release.
@@ -89,17 +101,27 @@ require("lazy").setup({
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp"
 	},
-	'hrsh7th/cmp-buffer',
-	'hrsh7th/cmp-path',
-	'hrsh7th/cmp-cmdline',
-	{ 'tzachar/cmp-tabnine', build = 'bash install.sh' },
+	"onsails/lspkind.nvim",
+	
+ --  {
+	-- 	'SirVer/ultisnips',
+ --    dependencies = {{'honza/vim-snippets', dir='.'}},
+ --    config = function()      
+ --      vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'      
+ --      vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
+ --      vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
+ --      vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
+ --      vim.g.UltiSnipsRemoveSelectModeMappings = 0
+	-- 		
+ --    end
+	-- },
 
 	-- debug
 	'mfussenegger/nvim-dap',
 	'rcarriga/nvim-dap-ui',
 	{ 'sakhnik/nvim-gdb', lazy = true },
 	'theHamsta/nvim-dap-virtual-text',
-	-- 'norcalli/snippets.nvim', -- 运行代码片段
+	-- snippets.nvim -- 运行代码片段
 	{ 'michaelb/sniprun', build = 'bash install.sh' },
 	-- cmake 集成
 	'Civitasv/cmake-tools.nvim',
@@ -117,5 +139,8 @@ require("lazy").setup({
   'yianwillis/vimcdoc', --中文文档
 
 	-- COC补全
-	{ 'neoclide/coc.nvim', branch='release'}
+	{ 'neoclide/coc.nvim', branch='release'},
+
+	-- 语言支持
+	{'iamcco/markdown-preview.nvim', build='cd app && npm install'  },
 })

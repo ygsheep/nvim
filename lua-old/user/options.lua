@@ -9,7 +9,7 @@ opt.shiftwidth = 2
 opt.autoindent = true
 
 -- 补全增强
-vim.o.wildmenu = true
+vim.o.wildmenu = false
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = 'utf-8'

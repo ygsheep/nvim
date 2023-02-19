@@ -46,7 +46,6 @@ local check_backspace = function()
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
-
 cmp.setup({
   snippet = {
     expand = function(args)
@@ -103,6 +102,7 @@ cmp.setup({
         nvim_lsp = "[LSP]",
 				cmp_tabnine = "[TabNine]",
         ultisnips = "[Snippet]",
+        cmp_luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
@@ -112,12 +112,12 @@ cmp.setup({
 
   -- 这里重要
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-    { name = 'path' },
-		},{ name = 'cmp_tabnine' },
-		{
+		{ name = 'nvim_lsp' },
+		{ name = 'luasnip' },
+		{ name = 'path' },
+		{ name = 'cmp_tabnine' },
     { name = 'buffer' },
+		{name = 'cmp_luasnip'},
   }),
 	  -- Set configuration for specific filetype.
   cmp.setup.filetype('gitcommit', {
@@ -145,3 +145,6 @@ cmp.setup({
       { name = 'cmdline' }})
 	})
 })
+
+
+
