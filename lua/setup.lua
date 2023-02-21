@@ -93,27 +93,30 @@ require("lazy").setup({
 			'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
 			{ 'tzachar/cmp-tabnine', build = 'bash install.sh' },
 		},
-  },
+	},
 	{
 		"L3MON4D3/LuaSnip",
 		-- follow latest release.
 		version = "<CurrentMajor>.*",
 		-- install jsregexp (optional!).
-		build = "make install_jsregexp"
+		build = "make install_jsregexp",
+		dependencies = {
+			"rafamadriz/friendly-snippets",
+			"onsails/lspkind.nvim",
+		}
 	},
-	"onsails/lspkind.nvim",
-	
- --  {
+
+	--  {
 	-- 	'SirVer/ultisnips',
- --    dependencies = {{'honza/vim-snippets', dir='.'}},
- --    config = function()      
- --      vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'      
- --      vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
- --      vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
- --      vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
- --      vim.g.UltiSnipsRemoveSelectModeMappings = 0
+	--    dependencies = {{'honza/vim-snippets', dir='.'}},
+	--    config = function()
+	--      vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
+	--      vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
+	--      vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
+	--      vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
+	--      vim.g.UltiSnipsRemoveSelectModeMappings = 0
 	-- 		
- --    end
+	--    end
 	-- },
 
 	-- debug
@@ -133,14 +136,14 @@ require("lazy").setup({
 	'rhysd/accelerated-jk', -- 加速移动jk
 	'ggandor/flit.nvim',
 	'Pocco81/auto-save.nvim', -- 自动保存
-  'mbbill/undotree', --撤销插件
+	'mbbill/undotree', --撤销插件
 	'voldikss/vim-translator', -- 翻译
 	"potamides/pantran.nvim", -- translator
-  'yianwillis/vimcdoc', --中文文档
+	'yianwillis/vimcdoc', --中文文档
 
 	-- COC补全
-	{ 'neoclide/coc.nvim', branch='release'},
+	{ 'neoclide/coc.nvim',            branch = 'release' },
 
 	-- 语言支持
-	{'iamcco/markdown-preview.nvim', build='cd app && npm install'  },
+	{ 'iamcco/markdown-preview.nvim', build = 'cd app && npm install' },
 })

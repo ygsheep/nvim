@@ -46,3 +46,13 @@ keymap.set('n','<C-h>','<C-w>h')
 keymap.set('n','<C-j>','<C-w>j')
 keymap.set('n','<C-k>','<C-w>k')
 keymap.set('n','<C-l>','<C-w>l')
+
+
+
+
+keymap.set('n','<c-j>','vykp')
+keymap.set('n','<C-k>','Vyp')
+
+keymap.set('n','tx',':r !figlet ')
+keymap.set('n','tl',':r !ls | grep . <CR>')
+

@@ -1,4 +1,8 @@
 
+require'luasnip'.filetype_extend("ruby", {"rails"}) -- 代码片段
+
+
+-- 设置快捷键
 vim.cmd [[
 	" press <Tab> to expand or jump in a snippet. These can also be mapped separatel	y
 	" via <Plug>luasnip-expand-snippet and <Plug>luasnip-jump-next.
