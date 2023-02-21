@@ -6,7 +6,6 @@ using std::cout;
 using std::endl;
 
 void operator""_p(const char *str, ssize_t size) {
-
 	cout << str << " size: " << size;
 }
 
