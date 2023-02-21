@@ -13,6 +13,7 @@
         "border",
         "diagnostics",
         "Plug",
-        "pantran"
+        "pantran",
+        "css"
     ]
 }

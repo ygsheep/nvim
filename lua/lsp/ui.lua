@@ -1,5 +1,3 @@
-
-
 -- Configure lsp information display style
 local M = {}
 

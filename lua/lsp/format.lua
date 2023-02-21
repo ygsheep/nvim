@@ -38,6 +38,7 @@ prettier.setup({
 	filetypes = {
 		"css",
 		"cpp",
+		"python",
 		"graphql",
 		"html",
 		"javascript",

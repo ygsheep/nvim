@@ -28,6 +28,10 @@ keymap.set("n","<down>",":res -5<CR>")
 keymap.set("n","<left>",":vertical resize-5<CR>")
 keymap.set("n","<right>",":vertical resize+5<CR>")
 
+-- 反复横跳
+keymap.set({"n","v"},"<leader>i","<C-i>")
+keymap.set({"n","v"},"<leader>o","<C-o>")
+
 
 keymap.set("n",";",":")
 keymap.set("n","S",":w<CR>")

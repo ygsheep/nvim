@@ -42,7 +42,7 @@ wk.register({
 		name = "+LSP",
 		f = { "<cmd>lua vim.lsp.buf.format()<CR>", "代码格式化" },
 		d = { "<cmd>lua require('dapui').toggle()<CR>", "Debug" },
-
+		i = { ":Mason<CR>", "Open Install Gui" },
 	},
 	["<LEADER>g"] = {
 		name = "+Debug"

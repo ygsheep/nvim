@@ -1,3 +1,11 @@
+-- 			/ /________  _________ _____ _____ _
+-- 		 / / ___/ __ \/ ___/ __ `/ __ `/ __ `/
+-- 		/ (__  ) /_/ (__  ) /_/ / /_/ / /_/ /
+-- 	 /_/____/ .___/____/\__,_/\__, /\__,_/
+-- 				 /_/               /____/
+--
+-- ⚡ Designed for convenience and efficiency ⚡
+
 local keymap = vim.keymap.set
 -- Lsp finder find the symbol definition implement reference
 -- if there is no implement it will hide
@@ -6,7 +14,7 @@ local keymap = vim.keymap.set
 keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
 
 -- Code action
-keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+keymap({ "n", "v" }, "<leader>la", "<cmd>Lspsaga code_action<CR>")
 
 -- Rename
 keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
@@ -18,7 +26,7 @@ keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
 keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
 
 -- Go to Definition
-keymap("n","gd", "<cmd>Lspsaga goto_definition<CR>")
+keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
 
 -- Show line diagnostics you can pass argument ++unfocus to make
 -- show_line_diagnostics float window unfocus
@@ -37,14 +45,14 @@ keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
 
 -- Diagnostic jump with filter like Only jump to error
 keymap("n", "[E", function()
-  require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
+	require("lspsaga.diagnostic").goto_prev({ severity = vim.diagnostic.severity.ERROR })
 end)
 keymap("n", "]E", function()
-  require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
+	require("lspsaga.diagnostic").goto_next({ severity = vim.diagnostic.severity.ERROR })
 end)
 
 -- Toggle Outline
-keymap("n","<leader>o", "<cmd>Lspsaga outline<CR>")
+keymap("n", "<leader>lo", "<cmd>Lspsaga outline<CR>")
 
 -- Hover Doc
 -- if there has no hover will have a notify no information available
@@ -62,13 +70,13 @@ keymap("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
 keymap("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
 
 -- Float terminal
-keymap({"n", "t"}, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
+keymap({ "n", "t" }, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
 
 
 require('lspsaga').setup({})
 
 require('goto-preview').setup {}
-vim.keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", {noremap=true})
+vim.keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", { noremap = true })
 
 vim.cmd [[
 nnoremap gpd <cmd>lua require('goto-preview').goto_preview_definition()<CR>
@@ -77,3 +85,31 @@ nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>
 nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>
 nnoremap gpr <cmd>lua require('goto-preview').goto_preview_references()<CR>
 ]]
+
+require("lspsaga").setup({
+	preview = {
+		lines_above = 0,
+		lines_below = 10,
+	},
+	scroll_preview = {
+		scroll_down = "<C-f>",
+		scroll_up = "<C-b>",
+	},
+	request_timeout = 2000,
+	-- TODO: lsp_finder
+  finder = {
+    --percentage
+    max_height = 0.5,
+    keys = {
+      jump_to = 'p',
+      edit = { 'o', '<CR>' },
+      vsplit = 's',
+      split = 'i',
+      tabe = 't',
+      tabnew = 'r',
+      quit = { 'q', '<ESC>' },
+      close_in_preview = '<ESC>'
+    },
+  },
+	
+})
