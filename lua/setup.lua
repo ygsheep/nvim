@@ -146,4 +146,6 @@ require("lazy").setup({
 
 	-- 语言支持
 	{ 'iamcco/markdown-preview.nvim', build = 'cd app && npm install' },
+
+	'vimwiki/vimwiki', -- 个人wiki插件
 })
