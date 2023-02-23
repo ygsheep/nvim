@@ -3,6 +3,6 @@
 
 int main(int argc, char *argv[])
 {
-
-	return EXIT_SUCCESS;
+	printf("hello_world");
+	return 0;
 }
