@@ -11,7 +11,7 @@ pip3 install pynvim
 
 npm i neovim -g
 # C++ 编译与调试
-sudo pacman -S gcc cmake make gdb clang 
+sudo pacman -S gcc cmake make gdb clang xclib
 # LSP python补全
 
 # :checkhealth，会进行基本环境的检查
