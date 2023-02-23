@@ -54,11 +54,14 @@
   "telescope.nvim": { "branch": "master", "commit": "203bf5609137600d73e8ed82703d6b0e320a5f36" },
   "todo-comments.nvim": { "branch": "main", "commit": "74c7d28cb50b0713c881ef69bcb6cdd77d8907d1" },
   "undotree": { "branch": "master", "commit": "b6fdb95db53b7ceb23ddfe8a8211a3135d98eef0" },
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "vim-translator": { "branch": "master", "commit": "681c6b2f650b699572e6bb55162a3d6e62ee5d43" },
   "vim_current_word": { "branch": "master", "commit": "961d54dd53a1da7a9402dc92098a8a8c75d79ac6" },
   "vimcdoc": { "branch": "master", "commit": "e134d0313b615bc5bc94e6fc7b35f90c3f46c49f" },
+  "vimtex": { "branch": "master", "commit": "6e79c4fa42ef0eb5216220afe835be8fe9d2369d" },
   "vimwiki": { "branch": "dev", "commit": "fea8bee382b2051b0137fd2cacf0862823ee69b3" },
   "vscode.nvim": { "branch": "main", "commit": "db9ee339b5556aa832ca58871fd18f9467a18520" },
   "which-key.nvim": { "branch": "main", "commit": "5224c261825263f46f6771f1b644cae33cd06995" },
+  "wildfire.vim": { "branch": "master", "commit": "b371e2b1d938ae0e164146136051de164ecb9aa5" },
   "zephyr-nvim": { "branch": "main", "commit": "7fd86b7164442d3b5ec2c81b2694d040e716b5cf" }
 }
