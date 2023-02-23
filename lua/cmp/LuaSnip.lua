@@ -1,5 +1,6 @@
 
 require'luasnip'.filetype_extend("ruby", {"rails"}) -- 代码片段
+require("luasnip.loaders.from_vscode").lazy_load() --  加载已有vscode 补全
 
 
 -- 设置快捷键

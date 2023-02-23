@@ -1,6 +1,7 @@
 require("lsp.ui").setup()
 require("lsp.lspsage")
 require("lsp.format")
+require('lsp.vimtex')
 require("mason").setup({
 	ui = {
 		icons = {
@@ -20,6 +21,7 @@ local servers = {
 	"lua_ls",
 	"html",
 	"jdtls",
+	"ltex",
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

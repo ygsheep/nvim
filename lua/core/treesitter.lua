@@ -10,6 +10,7 @@ require 'nvim-treesitter.configs'.setup {
 		"html",
 		"vim",
 		"lua",
+		"latex",
 		"java",
 		"json",
 		"javascript",

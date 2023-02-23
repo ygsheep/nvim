@@ -14,6 +14,7 @@
         "diagnostics",
         "Plug",
         "pantran",
-        "css"
+        "css",
+        "let"
     ]
 }

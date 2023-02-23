@@ -142,10 +142,21 @@ require("lazy").setup({
 	'yianwillis/vimcdoc', --中文文档
 
 	-- COC补全
-	{ 'neoclide/coc.nvim',            branch = 'release' },
+	{ 'neoclide/coc.nvim', branch = 'release' },
 
 	-- 语言支持
-	{ 'iamcco/markdown-preview.nvim', build = 'cd app && npm install' },
+	{
+		'iamcco/markdown-preview.nvim',
+		build = 'cd app && npm install',
+		config = function()
+			vim.cmd("let g:mkdp_browser = 'chromium'")
+		end
 
+	},
+	-- Latex language
+	'lervag/vimtex',
+	--  text code
+	'gcmt/wildfire.vim',
+	'tpope/vim-surround',
 	'vimwiki/vimwiki', -- 个人wiki插件
 })
