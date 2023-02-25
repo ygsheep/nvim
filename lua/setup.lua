@@ -140,7 +140,7 @@ require("lazy").setup({
 	'voldikss/vim-translator', -- 翻译
 	"potamides/pantran.nvim", -- translator
 	'yianwillis/vimcdoc', --中文文档
-
+	{'mg979/vim-visual-multi', tag = 'master'},
 	-- COC补全
 	{ 'neoclide/coc.nvim', branch = 'release' },
 
