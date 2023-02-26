@@ -1,0 +1,16 @@
+{
+	"Commit": {
+		"prefix": "myself",
+		"body": [
+			"expands? jumps? $1 $2 !"
+		]
+	},
+	"test": {
+		"prefix": "all2",
+		"body": [
+			"multi $1",
+			"line $2",
+			"snippet$0"
+		]
+	}
+}
