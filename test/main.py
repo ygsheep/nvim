@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from typing import *
 
 def febonacce(k:int)-> Generator[int,None,None]:
