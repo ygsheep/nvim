@@ -58,6 +58,8 @@ keymap.set({ 'v', 'n' }, 'Y', '"+yy')
 keymap.set({ 'v', 'n' }, 'p', '"+p')
 keymap.set({ 'v', 'n' }, 'P', '"+P')
 
+
+
 -- other
 vim.cmd [[
 	

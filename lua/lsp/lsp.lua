@@ -3,7 +3,6 @@ require("lsp.lspsage")
 require("lsp.format")
 require('lsp.vimtex')
 
-require("snippet.md-snippet")
 
 require("mason").setup({
 	ui = {
@@ -24,6 +23,7 @@ local servers = {
 	"lua_ls",
 	"html",
 	"jdtls",
+	"jsonls",
 	"marksman",
 	"ltex",
 }

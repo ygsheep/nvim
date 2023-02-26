@@ -1,8 +1,7 @@
 
-require'luasnip'.filetype_extend("ruby", {"rails"}) -- 代码片段
 require("luasnip.loaders.from_vscode").lazy_load() --  加载已有vscode 补全
-
-
+require("luasnip.loaders.from_vscode").load({paths = "./my_snippets"})
+require("luasnip").filetype_extend("typescript", { "javascript" })
 -- 设置快捷键
 vim.cmd [[
 	" press <Tab> to expand or jump in a snippet. These can also be mapped separatel	y

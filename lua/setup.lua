@@ -16,11 +16,17 @@ require("lazy").setup({
 	-- requires -> neo-tree
 	"nvim-lua/plenary.nvim",
 	"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-	"MunifTanjim/nui.nvim",
-	'rcarriga/nvim-notify',
+	
+	{
+		"folke/noice.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			'rcarriga/nvim-notify', -- 提示窗口
+		}
+	},
+
 	"folke/neoconf.nvim",
 	"folke/neodev.nvim",
-	'rcarriga/nvim-notify', -- 提示窗口
 
 	-- <LEADER> windows
 	"folke/which-key.nvim",
@@ -140,9 +146,9 @@ require("lazy").setup({
 	'voldikss/vim-translator', -- 翻译
 	"potamides/pantran.nvim", -- translator
 	'yianwillis/vimcdoc', --中文文档
-	{'mg979/vim-visual-multi', tag = 'master'},
+	{ 'mg979/vim-visual-multi', tag = 'master' },
 	-- COC补全
-	{ 'neoclide/coc.nvim', branch = 'release' },
+	{ 'neoclide/coc.nvim',      branch = 'release' },
 
 	-- 语言支持
 	{

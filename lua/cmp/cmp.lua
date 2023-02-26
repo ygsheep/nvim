@@ -38,7 +38,6 @@ if not snip_status_ok then
   return
 end
 
-require("luasnip.loaders.from_vscode").lazy_load()
 
 -- 下面会用到这个函数
 local check_backspace = function()
@@ -101,8 +100,8 @@ cmp.setup({
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
 				cmp_tabnine = "[TabNine]",
+				luasnip = "[Snippet]",
         ultisnips = "[Snippet]",
-        cmp_luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
