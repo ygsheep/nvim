@@ -16,7 +16,7 @@ require("lazy").setup({
 	-- requires -> neo-tree
 	"nvim-lua/plenary.nvim",
 	"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-	
+
 	{
 		"folke/noice.nvim",
 		dependencies = {
@@ -112,18 +112,11 @@ require("lazy").setup({
 		}
 	},
 
-	--  {
-	-- 	'SirVer/ultisnips',
-	--    dependencies = {{'honza/vim-snippets', dir='.'}},
-	--    config = function()
-	--      vim.g.UltiSnipsExpandTrigger = '<Plug>(ultisnips_expand)'
-	--      vim.g.UltiSnipsJumpForwardTrigger = '<Plug>(ultisnips_jump_forward)'
-	--      vim.g.UltiSnipsJumpBackwardTrigger = '<Plug>(ultisnips_jump_backward)'
-	--      vim.g.UltiSnipsListSnippets = '<c-x><c-s>'
-	--      vim.g.UltiSnipsRemoveSelectModeMappings = 0
-	-- 		
-	--    end
-	-- },
+	{
+		'SirVer/ultisnips',
+		dependencies = { { 'honza/vim-snippets', dir = '.' } },
+
+	},
 
 	-- debug
 	'mfussenegger/nvim-dap',

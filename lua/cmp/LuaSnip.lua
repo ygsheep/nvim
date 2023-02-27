@@ -1,6 +1,7 @@
 
 require("luasnip.loaders.from_vscode").lazy_load() --  加载已有vscode 补全
-require("luasnip.loaders.from_vscode").load({paths = "./my_snippets"})
+require("luasnip.loaders.from_vscode").load({paths = "./my-snippets"})
+require("luasnip").filetype_extend("md", { "markdown" })
 require("luasnip").filetype_extend("typescript", { "javascript" })
 -- 设置快捷键
 vim.cmd [[

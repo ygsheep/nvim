@@ -98,10 +98,10 @@ cmp.setup({
       -- Kind icons
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.menu = ({
-        nvim_lsp = "[LSP]",
-				cmp_tabnine = "[TabNine]",
 				luasnip = "[Snippet]",
         ultisnips = "[Snippet]",
+				nvim_lsp = "[LSP]",
+				cmp_tabnine = "[TabNine]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
@@ -114,9 +114,9 @@ cmp.setup({
 		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' },
 		{ name = 'path' },
-		{ name = 'cmp_tabnine' },
     { name = 'buffer' },
 		{name = 'cmp_luasnip'},
+		{ name = 'cmp_tabnine' },
   }),
 	  -- Set configuration for specific filetype.
   cmp.setup.filetype('gitcommit', {

@@ -16,9 +16,9 @@ class Generator():
         pass
 
 
-
 if __name__ == "__main__":
     for _ in febonacce(100):
         sum = _
     print(f"{sum}")
+
 

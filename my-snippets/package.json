@@ -12,26 +12,24 @@
 				"language": [
 					"lua"
 				],
-				"path": "./lua.json"
+				"path": "./snippets/lua.json"
 			},
 			{
 				"language": [
 					"cpp"
 				],
-				"path": "./cpp.json"
+				"path": "./snippets/cpp.json"
 			},
 			{
 				"language": [
 					"python"
 				],
-				"path": "./python.json"
+				"path": "./snippets/python.json"
 			},
 			{
-				"language": [
-					"markdown"
-				],
-				"path": "./markdowm.json"
-			}
+        "language": "markdown",
+        "path": "./snippets/markdown.json"
+      }
 		]
-	}
+  }
 }

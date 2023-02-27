@@ -132,8 +132,12 @@ Default `<localleader>` is `,`
 
 
 
-## Markdowm
+## Markdown
 Neovim Plugs:
 -	[Markdown Preview for (Neo)vim](https://github.com/iamcco/markdown-preview.nvim)
 
+|        <cmd>         |  commit  |
+|         :-:          |   :-:    |
+|   :MarkdownPreview   |   预览   |
+| :MarkdownPreviewStop | 关闭预览 |
 

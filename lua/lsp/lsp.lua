@@ -24,7 +24,6 @@ local servers = {
 	"html",
 	"jdtls",
 	"jsonls",
-	"marksman",
 	"ltex",
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()

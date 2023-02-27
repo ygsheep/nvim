@@ -1,0 +1,13 @@
+{
+	"commit":{
+		"prefix":["cm","commit"],
+		"body":[
+			"/*",
+			"*",
+			"* @author: ${1:yysheep}",
+			"* @Save ${2:}",
+			"*",
+			"*/"
+		]
+	}
+}

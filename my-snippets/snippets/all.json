@@ -1,0 +1,26 @@
+{
+	"athour": {
+		"prefix": "myself",
+		"body": [
+			""
+		]
+	},
+	"table title": {
+		"prefix": "th",
+		"body": [
+			"|  $1  |  $2  |",
+			"| :-:  |  :-: |",
+			"$0"
+		],
+		"description": "In Markdown table"
+
+	},
+	"table": {
+		"prefix": "tb",
+		"body": [
+			"|  $1  |  $2  |",
+			"$0"
+		],
+		"description": "In Markdown table"
+	}
+}
