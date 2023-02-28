@@ -17,6 +17,7 @@ require("core.todo-comments")
 require("core.autopairs")
 -- search
 require("core.telescope")
+require("core.fzf")
 require("core.treesitter")
 require("core.translator")
 -- other

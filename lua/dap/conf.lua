@@ -7,12 +7,12 @@
 
 local map = vim.keymap.set
 
-map("n","F5",":lua require'dap'.continue()<CR>")
-map("n","F6",":lua require'dap'.step_into()<CR>")
-map("n","F7",":lua require'dap'.step_over()<CR>")
+map("n",",r",":lua require'dap'.continue()<CR>")
+map("n",",i",":lua require'dap'.step_into()<CR>")
+map("n",",n",":lua require'dap'.step_over()<CR>")
 map("n","<LEADER>dd",":lua require'dap'.toggle_breakpoint()<CR>")
 map("n","<LEADER>dw",":lua require'dap'.repl.open()<CR>")
-map("n","<LEADER>dc",":lua require'dap'.repl.close()<CR>")
+map("n","<LEADER>dcd",":lua require'dap'.repl.close()<CR>")
 
 local dap_breakpoint_color = {
     breakpoint = {

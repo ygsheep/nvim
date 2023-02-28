@@ -1,17 +1,3 @@
--- example using a list of specs with the default options
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
-	})
-end
-vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
 	-- requires -> neo-tree
 	"nvim-lua/plenary.nvim",
@@ -56,13 +42,12 @@ require("lazy").setup({
 
 	-- search plugin
 	'nvim-telescope/telescope.nvim',
-
+	{ 'junegunn/fzf',     build = "cd ~/.fzf && ./install --all" },
+	{ 'junegunn/fzf.vim', after = "fzf" },
 
 	-- 注释
 	'numToStr/Comment.nvim',
 	"folke/todo-comments.nvim",
-	-- file search
-	'nvim-telescope/telescope.nvim',
 	-- tree
 	"nvim-neo-tree/neo-tree.nvim",
 	-- color theme
@@ -114,19 +99,19 @@ require("lazy").setup({
 
 	{
 		'SirVer/ultisnips',
-		dependencies = {  'honza/vim-snippets' },
+		dependencies = { 'honza/vim-snippets' },
 	},
-		
+
 
 	-- debug
-	{ 'mfussenegger/nvim-dap' ,lazy = true},
+	{ 'mfussenegger/nvim-dap', lazy = true },
 	'rcarriga/nvim-dap-ui',
-	{ 'sakhnik/nvim-gdb', lazy = true },
+	-- { 'sakhnik/nvim-gdb',      lazy = true },
 	'theHamsta/nvim-dap-virtual-text',
 	-- snippets.nvim -- 运行代码片段
-	{ 'michaelb/sniprun', build = 'bash install.sh' },
+	{ 'michaelb/sniprun',          build = 'bash install.sh' },
 	-- cmake 集成
-	{'Civitasv/cmake-tools.nvim', lazy = true},
+	{ 'Civitasv/cmake-tools.nvim', lazy = true },
 
 	'lewis6991/gitsigns.nvim',
 	-- 更好的操作
@@ -153,7 +138,7 @@ require("lazy").setup({
 
 	},
 	-- Latex language
-	{'lervag/vimtex',lazy = true},
+	'lervag/vimtex',
 	--  text code
 	'gcmt/wildfire.vim',
 	'tpope/vim-surround',
