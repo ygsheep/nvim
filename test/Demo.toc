@@ -1,2 +1,0 @@
-\contentsline {part}{I\hspace {1em}實驗一、數據庫與表的基本操作}{2}{part.1}%
-\contentsline {section}{\numberline {0.1}實驗目的}{3}{section.0.1}%

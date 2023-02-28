@@ -5,7 +5,7 @@
 using std::cout;
 using std::endl;
 
-void operator""_p(const char *str, ssize_t size) {
+void operator""_p(const char *str, size_t size) {
 	cout << str << " size: " << size;
 }
 
