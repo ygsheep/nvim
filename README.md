@@ -1,4 +1,4 @@
-# 我的**Neovim**配置
+[#](#) 我的**Neovim**配置
 - init.lua 人口文件
 - lazy 管理插件
 
@@ -113,22 +113,22 @@ Default `<localleader>` is `,`
 
 | LHS             | RHS                           | MODE~ |
 | :-:             | :-:                           | :-:   |
-| <localleader>li | <plug>(vimtex-info)           | `n`   |
-| <localleader>lt | <plug>(vimtex-toc-open)       | `n`   |
-| <localleader>lT | <plug>(vimtex-toc-toggle)     | `n`   |
-| <localleader>lv | <plug>(vimtex-view)           | `n`   |
-| <localleader>ll | <plug>(vimtex-compile)        | `n`   |
-| <localleader>lo | <plug>(vimtex-compile-output) | `n`   |
-| <localleader>lg | <plug>(vimtex-status)         | `n`   |
-| <localleader>lG | <plug>(vimtex-status-all)     | `n`   |
-| <localleader>lc | <plug>(vimtex-clean)          | `n`   |
-| <localleader>lC | <plug>(vimtex-clean-full)     | `n`   |
-| dse             | <plug>(vimtex-env-delete)     | `n`   |
-| dsc             | <plug>(vimtex-cmd-delete)     | `n`   |
-| cse             | <plug>(vimtex-env-change)     | `n`   |
-| csc             | <plug>(vimtex-cmd-change)     | `n`   |
-| <F7>            | <plug>(vimtex-cmd-create)     | `nxi` |
-| ]]              | <plug>(vimtex-delim-close)    | `i`   |
+| <localleader>li | `<plug>(vimtex-info)`           | `n`   |
+| `<localleader>lt | `<plug>(vimtex-toc-open)`       | `n`   |
+| `<localleader>lT | `<plug>(vimtex-toc-toggle)`     | `n`   |
+| `<localleader>lv | `<plug>(vimtex-view)`           | `n`   |
+| `<localleader>ll | `<plug>(vimtex-compile)`        | `n`   |
+| `<localleader>lo | `<plug>(vimtex-compile-output)` | `n`   |
+| `<localleader>lg | `<plug>(vimtex-status)`         | `n`   |
+| `<localleader>lG | `<plug>(vimtex-status-all)`     | `n`   |
+| `<localleader>lc | `<plug>(vimtex-clean)`          | `n`   |
+| `<localleader>lC | `<plug>(vimtex-clean-full)`     | `n`   |
+| dse             | `<plug>(vimtex-env-delete)`     | `n`   |
+| dsc             | `<plug>(vimtex-cmd-delete)`     | `n`   |
+| cse             | `<plug>(vimtex-env-change)`     | `n`   |
+| csc             | `<plug>(vimtex-cmd-change)`     | `n`   |
+| `<F7>           | `<plug>(vimtex-cmd-create)`     | `nxi` |
+| ]]              | `<plug>(vimtex-delim-close)`    | `i`   |
 
 
 
@@ -136,8 +136,11 @@ Default `<localleader>` is `,`
 Neovim Plugs:
 -	[Markdown Preview for (Neo)vim](https://github.com/iamcco/markdown-preview.nvim)
 
+默认使用 chromium 打开
+`vim.cmd("let g:mkdp_browser = 'chromium'")` in [setup.lua](./lua/setup.lua)
 |        <cmd>         |  commit  |
 |         :-:          |   :-:    |
 |   :MarkdownPreview   |   预览   |
 | :MarkdownPreviewStop | 关闭预览 |
+
 

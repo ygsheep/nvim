@@ -3,7 +3,6 @@
 
 int main(int argc, char *argv[])
 {
-	printf("hello_world");
+	printf("Usage: %d", &argc); // Number
 	return 0;
 }
-

@@ -12,5 +12,6 @@ void operator""_p(const char *str, ssize_t size) {
 int main() {
 
 	"aaa"_p;
+	cout << "aaa" << endl;
 	return 0;
 }

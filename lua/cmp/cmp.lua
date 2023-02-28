@@ -1,4 +1,3 @@
-
 --   פּ ﯟ   some other good icons
 local kind_icons = {
   Text = "",
@@ -100,22 +99,21 @@ cmp.setup({
       vim_item.menu = ({
 				luasnip = "[Snippet]",
         ultisnips = "[Snippet]",
-				nvim_lsp = "[LSP]",
 				cmp_tabnine = "[TabNine]",
+				nvim_lsp = "[LSP]",
         buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
       return vim_item
     end,
   },
-
   -- 这里重要
   sources = cmp.config.sources({
-		{ name = 'nvim_lsp' },
 		{ name = 'luasnip' },
+		{name = 'cmp_luasnip'},
+		{ name = 'nvim_lsp' },
 		{ name = 'path' },
     { name = 'buffer' },
-		{name = 'cmp_luasnip'},
 		{ name = 'cmp_tabnine' },
   }),
 	  -- Set configuration for specific filetype.

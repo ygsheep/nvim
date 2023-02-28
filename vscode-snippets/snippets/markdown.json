@@ -1,14 +1,9 @@
 {
-	"athour": {
-		"prefix": "myself",
-		"body": [
-			""
-		]
-	},
+
 	"table title": {
 		"prefix": "th",
 		"body": [
-			"|  $1  |  $2  |",
+			"|  ${1:Title}  |  ${2:Column2}  |",
 			"| :-:  |  :-: |",
 			"$0"
 		],

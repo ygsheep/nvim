@@ -114,19 +114,19 @@ require("lazy").setup({
 
 	{
 		'SirVer/ultisnips',
-		dependencies = { { 'honza/vim-snippets', dir = '.' } },
-
+		dependencies = {  'honza/vim-snippets' },
 	},
+		
 
 	-- debug
-	'mfussenegger/nvim-dap',
+	{ 'mfussenegger/nvim-dap' ,lazy = true},
 	'rcarriga/nvim-dap-ui',
 	{ 'sakhnik/nvim-gdb', lazy = true },
 	'theHamsta/nvim-dap-virtual-text',
 	-- snippets.nvim -- 运行代码片段
 	{ 'michaelb/sniprun', build = 'bash install.sh' },
 	-- cmake 集成
-	'Civitasv/cmake-tools.nvim',
+	{'Civitasv/cmake-tools.nvim', lazy = true},
 
 	'lewis6991/gitsigns.nvim',
 	-- 更好的操作
@@ -141,7 +141,7 @@ require("lazy").setup({
 	'yianwillis/vimcdoc', --中文文档
 	{ 'mg979/vim-visual-multi', tag = 'master' },
 	-- COC补全
-	{ 'neoclide/coc.nvim',      branch = 'release' },
+	-- { 'neoclide/coc.nvim',      branch = 'release' },
 
 	-- 语言支持
 	{
@@ -153,7 +153,7 @@ require("lazy").setup({
 
 	},
 	-- Latex language
-	'lervag/vimtex',
+	{'lervag/vimtex',lazy = true},
 	--  text code
 	'gcmt/wildfire.vim',
 	'tpope/vim-surround',
