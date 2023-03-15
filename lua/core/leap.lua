@@ -14,13 +14,13 @@ autocmd ColorScheme * lua require('leap').init_highlight(true)
 ]]
 
 ------------ flit ------------
-require('flit').setup {
-  keys = { f = 'f', F = 'F', t = '\'t', T = '\'t' },
-  -- A string like "nv", "nvo", "o", etc.
-  labeled_modes = "v",
-  multiline = true,
-  -- Like `leap`s similar argument (call-specific overrides).
-  -- E.g.: opts = { equivalence_classes = {} }
-  opts = {}
-}
-
+-- require('flit').setup {
+--   keys = { f = 'f', F = 'F', t = '\'t', T = '\'t' },
+--   -- A string like "nv", "nvo", "o", etc.
+--   labeled_modes = "v",
+--   multiline = true,
+--   -- Like `leap`s similar argument (call-specific overrides).
+--   -- E.g.: opts = { equivalence_classes = {} }
+--   opts = {}
+-- }
+--

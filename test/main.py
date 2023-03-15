@@ -18,4 +18,3 @@ if __name__ == "__main__":
         sum = _
     print(f"{sum}")
 
-

@@ -7,8 +7,11 @@
 
 local map = vim.keymap.set
 
+map("n","<F5>",":lua require'dap'.continue()<CR>")
 map("n",",r",":lua require'dap'.continue()<CR>")
+map("n","<F7>",":lua require'dap'.step_into()<CR>")
 map("n",",i",":lua require'dap'.step_into()<CR>")
+map("n","<F8>",":lua require'dap'.step_over()<CR>")
 map("n",",n",":lua require'dap'.step_over()<CR>")
 map("n","<LEADER>dd",":lua require'dap'.toggle_breakpoint()<CR>")
 map("n","<LEADER>dw",":lua require'dap'.repl.open()<CR>")

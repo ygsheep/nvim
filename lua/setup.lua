@@ -42,8 +42,10 @@ require("lazy").setup({
 
 	-- search plugin
 	'nvim-telescope/telescope.nvim',
-	{ 'junegunn/fzf',     build = "cd ~/.fzf && ./install --all" },
-	{ 'junegunn/fzf.vim', after = "fzf" },
+	'brooth/far.vim',
+	-- { 'junegunn/fzf',     build = "cd ~/.fzf && ./install --all" },
+	-- { 'junegunn/fzf.vim', after = "fzf" },
+
 
 	-- 注释
 	'numToStr/Comment.nvim',
@@ -57,8 +59,11 @@ require("lazy").setup({
 	'glepnir/zephyr-nvim',
 
 	-- 更好的高亮
-	'nvim-treesitter/nvim-treesitter',
-	'p00f/nvim-ts-rainbow', -- 括号
+	{ 'nvim-treesitter/nvim-treesitter',
+		dependencies = {
+			'p00f/nvim-ts-rainbow', -- 括号
+		}
+	},
 	"windwp/nvim-autopairs", -- 自动补全括号
 	-- Lsp install ui : mason
 	"williamboman/mason.nvim",
@@ -104,7 +109,7 @@ require("lazy").setup({
 
 
 	-- debug
-	{ 'mfussenegger/nvim-dap', lazy = true },
+	{ 'mfussenegger/nvim-dap',     lazy = true },
 	'rcarriga/nvim-dap-ui',
 	-- { 'sakhnik/nvim-gdb',      lazy = true },
 	'theHamsta/nvim-dap-virtual-text',
@@ -118,7 +123,7 @@ require("lazy").setup({
 	'dominikduda/vim_current_word', -- 高亮当前单词	
 	'ggandor/leap.nvim', -- 移动插件
 	'rhysd/accelerated-jk', -- 加速移动jk
-	'ggandor/flit.nvim',
+	-- 'ggandor/flit.nvim',
 	'Pocco81/auto-save.nvim', -- 自动保存
 	'mbbill/undotree', --撤销插件
 	'voldikss/vim-translator', -- 翻译
@@ -132,8 +137,11 @@ require("lazy").setup({
 	{
 		'iamcco/markdown-preview.nvim',
 		build = 'cd app && npm install',
+		dependencies = {
+			'mzlogin/vim-markdown-toc'
+		},
 		config = function()
-			vim.cmd("let g:mkdp_browser = 'chromium'")
+			vim.g.mkdp_browser = "chromium"
 		end
 
 	},

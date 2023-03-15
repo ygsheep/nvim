@@ -1,6 +1,9 @@
-[#](#) 我的**Neovim**配置
+# 我的**Neovim**配置
 - init.lua 人口文件
 - lazy 管理插件
+
+---
+# 目录
 
 ## 依赖
 ### Arch Install

@@ -27,9 +27,11 @@
 				"path": "./snippets/python.json"
 			},
 			{
-        "language": "markdown",
-        "path": "./snippets/markdown.json"
-      }
+				"language": [
+					"markdown"
+				],
+				"path": "./snippets/markdown.json"
+			}
 		]
   }
 }

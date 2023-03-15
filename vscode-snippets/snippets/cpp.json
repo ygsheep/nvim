@@ -1,6 +1,6 @@
 {
 	"commit":{
-		"prefix":["cm","commit"],
+		"prefix":["cm","file-commit"],
 		"body":[
 			"/*",
 			"*",
@@ -8,6 +8,8 @@
 			"* @Save ${2:}",
 			"*",
 			"*/"
+			
+
 		]
 	}
 }

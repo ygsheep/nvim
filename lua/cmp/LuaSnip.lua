@@ -2,7 +2,7 @@
 require("luasnip.loaders.from_vscode").lazy_load() --  加载已有vscode 补全
 require("luasnip.loaders.from_vscode").load({paths = "./vscode-snippets"})
 require("luasnip.loaders.from_snipmate").lazy_load()
-require("luasnip.loaders.from_snipmate").lazy_load({paths = "./UltiSnips"})
+-- require("luasnip.loaders.from_snipmate").lazy_load({paths = "./UltiSnips"})
 require("luasnip").filetype_extend("typescript", { "javascript" })
 
 -- 设置快捷键

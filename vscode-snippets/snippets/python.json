@@ -1,3 +1,9 @@
 {
-
+	"Run main":{
+		"prefix":["__name__","main"],
+		"body":[
+			"if __name__ == \"__main__\":",
+			"\t${1:pass}"
+		]
+	}
 }
