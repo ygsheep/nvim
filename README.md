@@ -21,60 +21,6 @@ sudo pacman -S gcc cmake make gdb clang xclip
 
 ```
 
-Tree 文件结构
-```bash
-
-.
-├── init.lua
-├── lazy-lock.json
-├── lua
-│   ├── cmp
-│   │   ├── cmp.lua
-│   │   ├── cmp-tabnine.lua
-│   │   └── conf.lua
-│   ├── core
-│   │   ├── alpha.lua
-│   │   ├── autopairs.lua
-│   │   ├── autosave.lua
-│   │   ├── blankline.lua
-│   │   ├── comment.lua
-│   │   ├── conf.lua
-│   │   ├── gitsigns.lua
-│   │   ├── leap.lua
-│   │   ├── lualine.lua
-│   │   ├── neo-tree.lua
-│   │   ├── nvim-colorizer.lua
-│   │   ├── nvim-notify.lua
-│   │   ├── other.lua
-│   │   ├── telescope.lua
-│   │   ├── theme.lua
-│   │   ├── todo-comments.lua
-│   │   ├── translator.lua
-│   │   ├── treesitter.lua
-│   │   └── which-key.lua
-│   ├── dap
-│   │   ├── cmake-tools.lua
-│   │   ├── conf.lua
-│   │   ├── dap-cpp.lua
-│   │   ├── dap.lua
-│   │   ├── dap-python.lua
-│   │   ├── dap-ui.lua
-│   │   ├── dap-virtual-text.lua
-│   │   ├── dep-util.lua
-│   │   ├── gdb.lua
-│   │   ├── snippets.lua
-│   │   └── sniprun.lua
-│   ├── lsp
-│   │   ├── format.lua
-│   │   ├── lsp.lua
-│   │   ├── lspsage.lua
-│   │   └── ui.lua
-│   ├── setup.lua
-│   └── user
-│       ├── keymaps.lua
-│       └── options.lua
-```
-
 ## 插件列表
 setup.lua
 
@@ -146,4 +92,16 @@ Neovim Plugs:
 |   :MarkdownPreview   |   预览   |
 | :MarkdownPreviewStop | 关闭预览 |
 
+## vimwiki
 
+`<Leader>ww` -- 打开默认的 wiki 目录文件
+`<Leader>wt` -- 在新标签（Tab）中打开 wiki 目录文件
+`<Leader>ws` -- 在多个 wiki 中选择并打开该 wiki 的目录文件
+`<Leader>wd` -- 删除当前 wiki 文件
+`<Leader>wr` -- 重命名当前 wiki 文件
+`<Enter>` -- 创建或打开 wiki 链接
+`<Shift-Enter>` -- 先上下分屏再打开 wiki 链接（若非链接则先创建）
+`<Ctrl-Enter>` -- 先左右分屏再打开 wiki 链接（若非链接则先创建）
+`<Backspace>` -- 返回之前浏览的 wiki 文件
+`<Tab>` -- 跳到本文件中下一个 wiki 链接
+`<Shift-Tab>` -- 跳到本文件中上一个 wiki 链接
