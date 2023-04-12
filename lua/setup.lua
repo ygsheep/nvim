@@ -43,8 +43,8 @@ require("lazy").setup({
 	-- search plugin
 	'nvim-telescope/telescope.nvim',
 	'brooth/far.vim',
-	-- { 'junegunn/fzf',     build = "cd ~/.fzf && ./install --all" },
-	-- { 'junegunn/fzf.vim', after = "fzf" },
+	{ 'junegunn/fzf',     build = "cd ~/.fzf && ./install --all" },
+	{ 'junegunn/fzf.vim', after = "fzf" },
 
 
 	-- 注释
@@ -151,4 +151,9 @@ require("lazy").setup({
 	'gcmt/wildfire.vim',
 	'tpope/vim-surround',
 	'vimwiki/vimwiki', -- 个人wiki插件
+
+	-- 数据库UI
+	'tpope/vim-dadbod',
+	'kristijanhusak/vim-dadbod-ui'
+
 })
