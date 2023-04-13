@@ -12,7 +12,7 @@
 - gdb
 - xcilp 
 
-![checkhealth.png](./assets/checkhealth.png)
+![checkhealth.png](assets/checkhealth.png)
 
 
 ### Arch Linux
@@ -56,11 +56,18 @@ Plugin :
 - [wildfire.vim](https://github.com/gcmt/wildfire.vim)
 - [vim-surround](https://github.com/tpope/vim-surround)
 
-| Command | commit   |
-| :-:     | :-       |
-| `vv`    | 快速选择 |
+| Command   | commit   |
+| :-:       | :-       |
+| `vv`      | 快速选择 |
+| `<Enter>` | 增量选择 |
 
 
+| Command | commit         |
+| :-:     | :-             |
+| `S"`    | 选中文本添加"" |
+| `S'`    | 添加''         |
+
+`cs+修改+目标`：`cs'"` 将'Text' 改为 "Text"
 
 ### 翻译
 
