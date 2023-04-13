@@ -109,10 +109,17 @@ require("lazy").setup({
 
 
 	-- debug
-	{ 'mfussenegger/nvim-dap',     lazy = true },
-	'rcarriga/nvim-dap-ui',
+	{ 'mfussenegger/nvim-dap',
+		lazy = true,
+		dependencies = {
+			'leoluz/nvim-dap-go',
+			'rcarriga/nvim-dap-ui',
+			'theHamsta/nvim-dap-virtual-text',
+		}
+	},
 	-- { 'sakhnik/nvim-gdb',      lazy = true },
-	'theHamsta/nvim-dap-virtual-text',
+
+
 	-- snippets.nvim -- 运行代码片段
 	{ 'michaelb/sniprun',          build = 'bash install.sh' },
 	-- cmake 集成
@@ -120,7 +127,7 @@ require("lazy").setup({
 
 	'lewis6991/gitsigns.nvim',
 	-- 更好的操作
-	'dominikduda/vim_current_word', -- 高亮当前单词	
+	'dominikduda/vim_current_word', -- 高亮当前单词
 	'ggandor/leap.nvim', -- 移动插件
 	'rhysd/accelerated-jk', -- 加速移动jk
 	-- 'ggandor/flit.nvim',
@@ -145,6 +152,7 @@ require("lazy").setup({
 		end
 
 	},
+	'vim-autoformat/vim-autoformat',
 	-- Latex language
 	'lervag/vimtex',
 	--  text code
