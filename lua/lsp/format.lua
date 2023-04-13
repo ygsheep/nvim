@@ -39,7 +39,7 @@ prettier.setup({
 		"css",
 		"cpp",
 		"python",
-		"graphql",
+		"go",
 		"html",
 		"javascript",
 		"javascriptreact",

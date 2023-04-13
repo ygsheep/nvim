@@ -32,12 +32,14 @@ keymap.set({ "n", "v" }, "<leader>i", "<C-i>")
 keymap.set({ "n", "v" }, "<leader>o", "<C-o>")
 
 
-keymap.set("n", "S", ":w<CR>")
+-- keymap.set("n", "S", ":w<CR>")
 keymap.set("n", ">", ">>")
 keymap.set("n", "<", "<<")
 keymap.set("n", "<leader><leader>", "<ESC>/<++><CR>:nohlsearch<CR>c4l")
 -- 取消高亮
 keymap.set('n', '<leader>nh', ':nohl<CR>')
+-- 退出 vim
+keymap.set('n', '<C-q>', ':qa!<CR>')
 
 keymap.set('n', '<C-h>', '<C-w>h')
 keymap.set('n', '<C-j>', '<C-w>j')

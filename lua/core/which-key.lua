@@ -64,6 +64,9 @@ wk.register({
 	["<leader>n"] = {
 		h = { name = "取消搜索高亮" },
 	},
+	["\\"] = {
+		o = {  "<cmd>Lspsaga outline<CR>","函数与变量列表" },
+	},
 	["\\w"] = { name = "我的文档(wiki)",
 		-- i = { name = "" },
 		s = { name = "在多个 wiki 中选择并打开该 wiki 的目录文件" },
@@ -72,4 +75,8 @@ wk.register({
 		d = { name = "删除当前 wiki 文件" },
 		r = { name = "重命名当前 wiki 文件 " },
 	},
+	[ "\\f" ] = {
+		name = "Autoformat",
+		cmd = ":Autoformat<CR>"
+	}
 })

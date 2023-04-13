@@ -2,6 +2,7 @@ require("lsp.ui").setup()
 require("lsp.lspsage")
 require("lsp.format")
 require('lsp.vimtex')
+require('lsp.lspconfig')
 
 
 require("mason").setup({
@@ -13,7 +14,8 @@ require("mason").setup({
 		}
 	}
 })
-
+-- [Available LSP servers]
+-- https://github.com/williamboman/mason-lspconfig.nvim#default-configuration
 local servers = {
 	'rust_analyzer',
 	'tsserver',
@@ -22,9 +24,13 @@ local servers = {
 	"cmake",
 	"lua_ls",
 	"html",
+	"asm_lsp",
+	"marksman",
 	"jdtls",
 	"jsonls",
 	"ltex",
+	"golangci_lint_ls",
+	"sqlls"
 }
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
@@ -42,3 +48,5 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	}
 end
+
+

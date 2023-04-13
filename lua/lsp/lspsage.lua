@@ -1,8 +1,8 @@
--- 			/ /________  _________ _____ _____ _
--- 		 / / ___/ __ \/ ___/ __ `/ __ `/ __ `/
--- 		/ (__  ) /_/ (__  ) /_/ / /_/ / /_/ /
--- 	 /_/____/ .___/____/\__,_/\__, /\__,_/
--- 				 /_/               /____/
+--			/ /________  _________ _____ _____ _
+--		 / / ___/ __ \/ ___/ __ `/ __ `/ __ `/
+--		/ (__  ) /_/ (__  ) /_/ / /_/ / /_/ /
+--	 /_/____/ .___/____/\__,_/\__, /\__,_/
+--				 /_/               /____/
 --
 -- ⚡ Designed for convenience and efficiency ⚡
 
@@ -53,6 +53,7 @@ end)
 
 -- Toggle Outline
 keymap("n", "<leader>lo", "<cmd>Lspsaga outline<CR>")
+keymap("n", "T", "<cmd>Lspsaga outline<CR>")
 
 -- Hover Doc
 -- if there has no hover will have a notify no information available
@@ -97,19 +98,19 @@ require("lspsaga").setup({
 	},
 	request_timeout = 2000,
 	-- TODO: lsp_finder
-  finder = {
-    --percentage
-    max_height = 0.5,
-    keys = {
-      jump_to = 'p',
-      edit = { 'o', '<CR>' },
-      vsplit = 's',
-      split = 'i',
-      tabe = 't',
-      tabnew = 'r',
-      quit = { 'q', '<ESC>' },
-      close_in_preview = '<ESC>'
-    },
-  },
-	
+	finder = {
+		--percentage
+		max_height = 0.5,
+		keys = {
+			jump_to = 'p',
+			edit = { 'o', '<CR>' },
+			vsplit = 's',
+			split = 'i',
+			tabe = 't',
+			tabnew = 'r',
+			quit = { 'q', '<ESC>' },
+			close_in_preview = '<ESC>'
+		},
+	},
+
 })

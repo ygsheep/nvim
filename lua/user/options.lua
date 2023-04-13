@@ -49,21 +49,20 @@ opt.signcolumn = "yes"
 vim.cmd[[ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]
 -- neovideo 配置
 vim.cmd [[
-    if exists("g:neovide")
-      " set guifont=FiraCode\Medium:18
-			set guifont=JetBrains\Mono\Medium:20
-      let g:neovide_profiler = v:true
-    endif
-]]
+if exists("g:neovide")
+	" set guifont=FiraCode\Medium:18
+	set guifont=JetBrains\Mono\Medium:20
+	let g:neovide_profiler = v:true
+	endif
+	]]
 
--- fcitx5 config
--- 1、退出插入模式时禁用输入法，并保存状态
--- 2、表示之前状态打开了输入法，则进入插入模式时启动输入法
-vim.cmd[[
-    let fcitx5state=system("fcitx5-remote")
-    autocmd InsertLeave * :silent let fcitx5state=system("fcitx5-remote")[0] | silent !fcitx5-remote -c
-    autocmd InsertEnter * :silent if fcitx5state == 2 | call system("fcitx5-remote -o") | endif
-]]
-
-
+	-- fcitx5 config
+	-- 1、退出插入模式时禁用输入法，并保存状态
+	-- 2、表示之前状态打开了输入法，则进入插入模式时启动输入法
+	vim.cmd[[
+	let fcitx5state=system("fcitx5-remote")
+	autocmd InsertLeave * :silent let fcitx5state=system("fcitx5-remote")[0] | silent !fcitx5-remote -c
+	autocmd InsertEnter * :silent if fcitx5state == 2 | call system("fcitx5-remote -o") | endif
+	" au BufWrite * :Autoformat
+	]]
 
