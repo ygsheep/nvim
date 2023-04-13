@@ -12,7 +12,7 @@
 - gdb
 - xcilp 
 
-![](./assets/checkhealth.png)
+![checkhealth.png](./assets/checkhealth.png)
 
 
 ### Arch Linux
@@ -104,7 +104,7 @@ cmake_generate_options = { "-D", "CMAKE_TOOLCHAIN_FILE=/home/yysheep/workspace/v
 
 ## dap调试
 
-![](./assets/debug.png)
+![debug.png](./assets/debug.png)
 
 | Command      | commit             |
 | :-:          | :-                 |
