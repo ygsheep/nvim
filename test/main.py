@@ -14,7 +14,8 @@ def febonacce(k:int)-> Generator[int,None,None]:
 
 
 if __name__ == "__main__":
-    for _ in febonacce(100):
+    for _ in febonacce(10):
         sum = _
     print(f"{sum}")
+    pass
 

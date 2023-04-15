@@ -99,10 +99,10 @@ cmp.setup({
       vim_item.menu = ({
 				luasnip = "[Snippet]",
         ultisnips = "[Snippet]",
-				cmp_tabnine = "[TabNine]",
 				nvim_lsp = "[LSP]",
         buffer = "[Buffer]",
         path = "[Path]",
+				cmp_tabnine = "[TabNine]",
       })[entry.source.name]
       return vim_item
     end,

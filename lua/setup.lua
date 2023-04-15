@@ -12,7 +12,6 @@ require("lazy").setup({
 	},
 
 	"folke/neoconf.nvim",
-	"folke/neodev.nvim",
 
 	-- <LEADER> windows
 	"folke/which-key.nvim",
@@ -60,6 +59,7 @@ require("lazy").setup({
 
 	-- 更好的高亮
 	{ 'nvim-treesitter/nvim-treesitter',
+		-- event = "TSUpdate",
 		dependencies = {
 			'p00f/nvim-ts-rainbow', -- 括号
 		}
@@ -96,6 +96,7 @@ require("lazy").setup({
 		version = "<CurrentMajor>.*",
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp",
+		lazy  = true,
 		dependencies = {
 			"rafamadriz/friendly-snippets",
 			"onsails/lspkind.nvim",
@@ -109,15 +110,18 @@ require("lazy").setup({
 
 
 	-- debug
-	{ 'mfussenegger/nvim-dap',
+	{
+	'rcarriga/nvim-dap-ui',
 		lazy = true,
 		dependencies = {
+			"folke/neodev.nvim",
+			'mfussenegger/nvim-dap',
 			'leoluz/nvim-dap-go',
-			'rcarriga/nvim-dap-ui',
+			'mfussenegger/nvim-dap-python',
 			'theHamsta/nvim-dap-virtual-text',
 		}
 	},
-	-- { 'sakhnik/nvim-gdb',      lazy = true },
+	{ 'sakhnik/nvim-gdb', build = ':!./install.sh',      lazy = true },
 
 
 	-- snippets.nvim -- 运行代码片段
@@ -129,6 +133,7 @@ require("lazy").setup({
 	-- 更好的操作
 	'dominikduda/vim_current_word', -- 高亮当前单词
 	'ggandor/leap.nvim', -- 移动插件
+
 	'rhysd/accelerated-jk', -- 加速移动jk
 	-- 'ggandor/flit.nvim',
 	'Pocco81/auto-save.nvim', -- 自动保存
@@ -154,7 +159,7 @@ require("lazy").setup({
 	},
 	'vim-autoformat/vim-autoformat',
 	-- Latex language
-	'lervag/vimtex',
+	{ 'lervag/vimtex',ft = { "tex" },lazy = true},
 	--  text code
 	'gcmt/wildfire.vim',
 	'tpope/vim-surround',

@@ -21,10 +21,10 @@ require("user/keymaps")
 -- ------------- 插件 ----------------------
 require("core.conf")
 -- lsp 补全
-require("lsp/lsp")
+require("lsp.lsp")
 require("cmp.conf")
 -- Debug
-require("dap.dap")
+require("dap.conf")
 require("dap.sniprun")
 -- other --
 require("dap.cmake-tools")

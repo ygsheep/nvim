@@ -72,5 +72,5 @@ require 'sniprun'.setup({
 
 vim.api.nvim_set_keymap('v', '<leader>r', '<Plug>SnipRun', { silent = true })
 vim.api.nvim_set_keymap('n', '<leader>dr', '<Plug>SnipRunOperator', { silent = true })
-vim.api.nvim_set_keymap('n', '<leader>dr', '<Plug>SnipRun', { silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>dr', '<Plug>SnipRun', { silent = true })
 vim.api.nvim_set_keymap('n', '<leader>dcr', '<Plug>SnipClose', { silent = true })

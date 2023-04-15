@@ -16,5 +16,6 @@
         "pantran",
         "css",
         "let"
-    ]
+    ],
+    "workspace.checkThirdParty": false
 }
