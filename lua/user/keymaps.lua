@@ -11,7 +11,7 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '>-2<CR>gv=gv")
 
 -- 首尾移动
-keymap.set({ "n", "v" }, "H", "0")
+keymap.set({ "n", "v" }, "H", "^")
 keymap.set({ "n", "v" }, "L", "$")
 
 keymap.set("n", "dH", "d0")
@@ -37,7 +37,7 @@ keymap.set("n", ">", ">>")
 keymap.set("n", "<", "<<")
 keymap.set("n", "<leader><leader>", "<ESC>/<++><CR>:nohlsearch<CR>c4l")
 -- 取消高亮
-keymap.set('n', '<leader>nh', ':nohl<CR>')
+keymap.set('n', '<leader>h', ':nohl<CR>')
 -- 退出 vim
 keymap.set('n', '<C-q>', ':qa!<CR>')
 

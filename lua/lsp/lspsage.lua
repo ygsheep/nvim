@@ -92,6 +92,9 @@ require("lspsaga").setup({
 		lines_above = 0,
 		lines_below = 10,
 	},
+	symbol_in_winbar = {
+		enable = true,
+	},
 	scroll_preview = {
 		scroll_down = "<C-f>",
 		scroll_up = "<C-b>",
@@ -112,5 +115,4 @@ require("lspsaga").setup({
 			close_in_preview = '<ESC>'
 		},
 	},
-
 })

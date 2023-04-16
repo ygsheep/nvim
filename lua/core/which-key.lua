@@ -29,19 +29,18 @@ wk.register({
 		n = { "<cmd>enew<cr>", "新文件📄" },
 		b = { "<cmd>Telescope buffers<cr>", "Buffers" },
 		h = { "<cmd>Telescope help_tags<cr>", "帮助" },
-		t = { ":%s/", "文本替换" },
 		y = { "<Plug>TranslateW", "窗口翻译" }
 	},
 	["<LEADER>c"] = {
 		name = "+Code"
 	},
 	["<LEADER>d"] = {
-		name = "+Dap"
+		name = "+Dap and Debug",
+		u = { "<cmd>lua require('dapui').toggle()<CR>", "打开调试窗口" },
 	},
 	["<LEADER>l"] = {
 		name = "+LSP",
 		f = { "<cmd>lua vim.lsp.buf.format()<CR>", "代码格式化" },
-		d = { "<cmd>lua require('dapui').toggle()<CR>", "打开调试窗口" },
 		i = { ":Mason<CR>", "打开LSP管理器" },
 		c = { ":e ~/.config/nvim/<CR>" , "打开配置文件夹📂"},
 	},

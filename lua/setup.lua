@@ -18,7 +18,8 @@ require("lazy").setup({
 
 
 	-- theme.lua
-	'akinsho/bufferline.nvim', -- tap windosw
+	-- 标签栏 Tab
+	{'akinsho/bufferline.nvim', version = "v3.*", dependencies = 'nvim-tree/nvim-web-devicons'},
 	-- 'windwp/windline.nvim', -- 状态栏
 	'nvim-lualine/lualine.nvim',
 	-- 启动窗口

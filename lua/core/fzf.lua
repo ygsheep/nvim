@@ -10,11 +10,11 @@ func! CHistory()
   call fzf#vim#history(fzf#vim#with_preview(), 0)
 endf
 " Ag 全局文本搜索
-nnoremap <leader>rt :Rg<cr>
+nnoremap <leader>rl :Rg<cr>
 " 目录下文件搜索
 nnoremap <leader>rf :Files<cr>
 " 文件内文本搜索
-nnoremap <leader>rl :BLines<cr>
+nnoremap <leader>rt :BLines<cr>
 " git变更文件搜索
 nnoremap <leader>rg :GFiles?<cr>
 " nnoremap <c-h> :CHistory<cr>  " 目录下最近文件搜索

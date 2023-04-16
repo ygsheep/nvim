@@ -7,6 +7,8 @@ require("core.which-key")
 require("core.alpha")
 -- theme
 require("core.theme")
+-- bufferline
+require("core.bufferline")
 -- treesitter
 require("core.blankline")
 
