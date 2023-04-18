@@ -1,6 +1,6 @@
 
 -- 侧边啦 文件夹
-require("core.neo-tree")
+-- require("core.neo-tree")
 -- space 提示
 require("core.which-key")
 -- 开屏
@@ -24,7 +24,6 @@ require("core.treesitter")
 require("core.translator")
 -- other
 require("core.nvim-colorizer")
-require("core.nvim-notify")
 require("core.gitsigns")
 require("core.autosave")
 require("core.leap")

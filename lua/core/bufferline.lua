@@ -1,9 +1,16 @@
+local status_ok, bufferline = pcall(require, "bufferline")
+if not status_ok then
+	return
+end
+
 -- bufferline 标签
 vim.opt.termguicolors = true
-require("bufferline").setup({
+bufferline.setup({
 	options = {
+		separator_style = "thin",
 		buffer_close_icon = "",
-		close_command = "Bdelete %d",
+		-- vim:E492 Bdelete
+		close_command = "bdelete %d",
 		close_icon = "",
 		indicator = {
 			style = "icon",
@@ -28,15 +35,21 @@ require("bufferline").setup({
 			reveal = {'close'}
 		},
 		-- 左侧让出 nvim-tree 的位置
-		offsets = {{
-			filetype = "NvimTree",
-			text = "File Explorer",
-			highlight = "Directory",
-			text_align = "left"
-		}},
-		right_mouse_command = "Bdelete! %d",
+		offset_separator = true,
+		offsets = {
+			{
+				filetype = "neo-tree",
+				text = "File Explorer",
+				highlight = "Directory",
+				text_align = "left",
+				padding = 1
+			},
+			{ filetype = "NvimTree", text = "", padding = 1 },
+			{ filetype = "Outline", text = "", padding = 1 },
+		},
+		right_mouse_command = "bdelete! %d",
 		right_trunc_marker = "",
-		show_close_icon = false,
+		show_close_icon = true,
 		show_tab_indicators = true,
 	},
 	highlights = {
@@ -83,3 +96,8 @@ require("bufferline").setup({
 	}
 })
 
+vim.keymap.set("n","th","<cmd>BufferLineCyclePrev<CR>")
+vim.keymap.set("n","tl","<cmd>BufferLineCycleNext<CR>")
+vim.keymap.set("n","tj","<cmd>BufferLineCloseRight<CR>")
+vim.keymap.set("n","tk","<cmd>BufferLineCloseLeft<CR>")
+vim.keymap.set("n","tb","<cmd>bdelete<CR>")

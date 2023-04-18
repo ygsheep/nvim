@@ -32,13 +32,17 @@ local servers = {
 	"golangci_lint_ls",
 	"sqlls"
 }
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 vim.cmd [[autocmd! ColorScheme * highlight NormalFloat guibg=#1f2335]]
 vim.cmd [[autocmd! ColorScheme * highlight FloatBorder guifg=white guibg=#1f2335]]
 
 require("mason-lspconfig").setup {
 	ensure_installed = servers
+}
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+capabilities.textDocument.foldingRange = {
+	dynamicRegistration = false,
+	lineFoldingOnly = true
 }
 local lspconfig = require('lspconfig')
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp

@@ -69,7 +69,3 @@ require("neo-tree").setup({
 vim.keymap.set("n","tf",":Neotree left show reveal<cr>")
 vim.keymap.set("n","<LEADER>R",":Neotree float toggle reveal<cr>")
 vim.keymap.set("n","tt",":Neotree left toggle reveal<cr>")
-vim.keymap.set("n","th",":BufferLineCyclePrev<CR>")
-vim.keymap.set("n","tl",":BufferLineCycleNext<CR>")
-
-

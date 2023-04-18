@@ -62,7 +62,3 @@ keymap.set({ 'v', 'n' }, 'P', '"+P')
 
 
 
--- other
-vim.cmd [[
-	
-]]

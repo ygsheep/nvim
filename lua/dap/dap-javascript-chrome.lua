@@ -3,7 +3,7 @@
 -- cd ./vscode-chrome-debug
 -- npm install
 -- npm run build
---
+local dap = require('dap')
 
 dap.adapters.chrome = {
     type = "executable",

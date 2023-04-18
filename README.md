@@ -23,8 +23,7 @@ pip3 install pynvim
 
 sudo npm i neovim -g
 # C++ 编译与调试
-sudo pacman -S gcc cmake make gdb clang xclip
-
+sudo pacman -S gcc cmake make gdb clang xclip 
 :checkhealth -- 会进行基本环境的检查
 
 ```

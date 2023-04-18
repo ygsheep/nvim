@@ -1,8 +1,8 @@
 require("lazy").setup({
-	-- requires -> neo-tree
+	---------- UI Plugins ----------------
 	"nvim-lua/plenary.nvim",
 	"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-
+	"folke/neoconf.nvim",
 	{
 		"folke/noice.nvim",
 		dependencies = {
@@ -10,14 +10,8 @@ require("lazy").setup({
 			'rcarriga/nvim-notify', -- 提示窗口
 		}
 	},
-
-	"folke/neoconf.nvim",
-
 	-- <LEADER> windows
 	"folke/which-key.nvim",
-
-
-	-- theme.lua
 	-- 标签栏 Tab
 	{'akinsho/bufferline.nvim', version = "v3.*", dependencies = 'nvim-tree/nvim-web-devicons'},
 	-- 'windwp/windline.nvim', -- 状态栏
@@ -27,8 +21,7 @@ require("lazy").setup({
 	'goolord/alpha-nvim',
 	-- 参考线
 	"lukas-reineke/indent-blankline.nvim",
-	'NvChad/nvim-colorizer.lua', -- 颜色高亮
-
+	'NvChad/nvim-colorizer.lua', -- 识别颜色并且高亮 #000000
 	-- ui
 	{
 		'glepnir/lspsaga.nvim',
@@ -39,42 +32,55 @@ require("lazy").setup({
 		'weilbith/nvim-code-action-menu',
 		cmd = 'CodeActionMenu',
 	},
+	-- {
+	-- 	'simrat39/symbols-outline.nvim',
+	-- 	key = { "T" },
+	-- 	config = function()
+	-- 		require('symbols-outline').setup()
+	-- 		vim.keymap.set("n","T","<cmd>SymbolsOutline<CR>")
+	-- 	end
+	-- },
 
+
+	-----------文件插件-----------
+	-- tree
+	{ "nvim-neo-tree/neo-tree.nvim" ,config = function() require("core.neo-tree") end},
+
+	-- 加载大文件：如果打开的文件很大，此插件会禁用某些功能。
+	-- 要禁用的文件大小和功能是可配置的
+	"LunarVim/bigfile.nvim",
 	-- search plugin
-	'nvim-telescope/telescope.nvim',
+	{ 'nvim-telescope/telescope.nvim'},
 	'brooth/far.vim',
 	{ 'junegunn/fzf',     build = "cd ~/.fzf && ./install --all" },
 	{ 'junegunn/fzf.vim', after = "fzf" },
 
 
-	-- 注释
-	'numToStr/Comment.nvim',
-	"folke/todo-comments.nvim",
-	-- tree
-	"nvim-neo-tree/neo-tree.nvim",
-	-- color theme
-	'navarasu/onedark.nvim',
-	'Mofiqul/vscode.nvim',
-	'Th3Whit3Wolf/one-nvim',
-	'glepnir/zephyr-nvim',
 
+	---------- color theme plugins ----------
+	'navarasu/onedark.nvim',
+	{ 'projekt0n/github-nvim-theme', lazy = true,version = 'v0.0.*' },
+	-- 'Th3Whit3Wolf/one-nvim',
 	-- 更好的高亮
 	{ 'nvim-treesitter/nvim-treesitter',
-		-- event = "TSUpdate",
 		dependencies = {
 			'p00f/nvim-ts-rainbow', -- 括号
 		}
 	},
-	"windwp/nvim-autopairs", -- 自动补全括号
 	-- Lsp install ui : mason
-	"williamboman/mason.nvim",
-	"williamboman/mason-lspconfig.nvim",
-	"neovim/nvim-lspconfig",
-	-- "lukas-reineke/lsp-format.nvim", -- 格式化
+	{
+		"williamboman/mason.nvim",
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+			"neovim/nvim-lspconfig",
+		}
+	},
 	'jose-elias-alvarez/null-ls.nvim',
 	'MunifTanjim/prettier.nvim',
 
 
+
+	----------- LSP Plugins ----------
 	-- cmp 补全
 	{
 		'hrsh7th/nvim-cmp', -- Autocompletion plugin
@@ -108,11 +114,18 @@ require("lazy").setup({
 		'SirVer/ultisnips',
 		dependencies = { 'honza/vim-snippets' },
 	},
-
-
-	-- debug
 	{
-	'rcarriga/nvim-dap-ui',
+			"folke/trouble.nvim",
+			lazy = true,
+			cmd = { "TroubleToggle", "Trouble", "TroubleRefresh" },
+			config = function()
+					require("trouble").setup()
+			end,
+	},
+
+----------- debug Plugins ----------
+	{
+		'rcarriga/nvim-dap-ui',
 		lazy = true,
 		dependencies = {
 			"folke/neodev.nvim",
@@ -123,40 +136,80 @@ require("lazy").setup({
 		}
 	},
 	{ 'sakhnik/nvim-gdb', build = ':!./install.sh',      lazy = true },
-
-
 	-- snippets.nvim -- 运行代码片段
-	{ 'michaelb/sniprun',          build = 'bash install.sh' },
+	{
+		'michaelb/sniprun',
+		lazy = true ,
+		build = 'bash install.sh'
+	},
 	-- cmake 集成
-	{ 'Civitasv/cmake-tools.nvim', lazy = true },
+	{
+		'Civitasv/cmake-tools.nvim',
+		lazy = true,
+		ft = { "CMakeLists.txt", "cpp", "c","hpp","h"}
+	},
 
-	'lewis6991/gitsigns.nvim',
+	---------- Code Plugins --------------
+	'numToStr/Comment.nvim', -- 注释
+	"folke/todo-comments.nvim", --TEST: todo-comments 
+	'lewis6991/gitsigns.nvim', --  gitsigns
+	"windwp/nvim-autopairs", -- 自动补全括号
+	-- 增强 neovim 中的宏的功能
+	-- q：开始/结束录制宏
+	-- Q：执行当前选择的宏
+	-- <A-q>：切换宏槽位
+	-- cq：编辑当前槽位的宏
+	-- yq：复制当前槽位的宏
+	{
+		"chrisgrieser/nvim-recorder",
+		lazy = true,
+    keys = { "q", "Q", "<A-q>", "cq", "yq" },
+    config = function()
+        require("recorder").setup({
+            slots = { "a", "b", "c" },
+            mapping = {
+                startStopRecording = "q",
+                playMacro = "Q",
+                switchSlot = "<A-q>",
+                editMacro = "cq",
+                yankMacro = "yq",
+                -- addBreakPoint = "###",
+            },
+        })
+    end,
+	},
+	-- 代码折叠
+	{
+		'kevinhwang91/nvim-ufo',
+		dependencies = 'kevinhwang91/promise-async',
+		config = function()
+			require('core.nvim-ufo')
+		end
+	},
 	-- 更好的操作
 	'dominikduda/vim_current_word', -- 高亮当前单词
 	'ggandor/leap.nvim', -- 移动插件
-
-	'rhysd/accelerated-jk', -- 加速移动jk
 	-- 'ggandor/flit.nvim',
+	'rhysd/accelerated-jk', -- 加速移动jk
 	'Pocco81/auto-save.nvim', -- 自动保存
 	'mbbill/undotree', --撤销插件
 	'voldikss/vim-translator', -- 翻译
-	"potamides/pantran.nvim", -- translator
+	-- 'bujnlc8/vim-translator',
 	'yianwillis/vimcdoc', --中文文档
 	{ 'mg979/vim-visual-multi', tag = 'master' },
 	-- COC补全
 	-- { 'neoclide/coc.nvim',      branch = 'release' },
-
 	-- 语言支持
 	{
 		'iamcco/markdown-preview.nvim',
 		build = 'cd app && npm install',
 		dependencies = {
-			'mzlogin/vim-markdown-toc'
+			'mzlogin/vim-markdown-toc',
+
 		},
 		config = function()
 			vim.g.mkdp_browser = "chromium"
-		end
-
+		end,
 	},
 	'vim-autoformat/vim-autoformat',
 	-- Latex language
@@ -167,7 +220,16 @@ require("lazy").setup({
 	'vimwiki/vimwiki', -- 个人wiki插件
 
 	-- 数据库UI
-	'tpope/vim-dadbod',
-	'kristijanhusak/vim-dadbod-ui'
+	{
+		'kristijanhusak/vim-dadbod-ui',
+		lazy = true,
+		dependencies = {
+			'tpope/vim-dadbod',
+		}
+	},
+
+	---------- other ----------
+	'equalsraf/neovim-gui-shim', --  nvim-qt
+	{ "jbyuki/venn.nvim", lazy = true} --draw Ascll
 
 })

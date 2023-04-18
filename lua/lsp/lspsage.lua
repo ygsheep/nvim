@@ -23,7 +23,7 @@ keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
 -- you can edit the definition file in this float window
 -- also support open/vsplit/etc operation check definition_action_keys
 -- support tagstack C-t jump back
-keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
+-- keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
 
 -- Go to Definition
 keymap("n", "gd", "<cmd>Lspsaga goto_definition<CR>")
@@ -67,14 +67,12 @@ keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
 keymap("n", "K", "<cmd>Lspsaga hover_doc ++keep<CR>")
 
 -- Callhierarchy
-keymap("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
-keymap("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
+-- keymap("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
+-- keymap("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
 
 -- Float terminal
 keymap({ "n", "t" }, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")
 
-
-require('lspsaga').setup({})
 
 require('goto-preview').setup {}
 vim.keymap.set("n", "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", { noremap = true })

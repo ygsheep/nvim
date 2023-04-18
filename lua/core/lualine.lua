@@ -1,12 +1,8 @@
 
-local status_ok, alpha = pcall(require, "lualine")
+local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
 	return
 end
--- Eviline config for lualine
--- Author: shadmansaleh
--- Credit: glepnir
-local lualine = require('lualine')
 
 -- Color table for highlights
 -- stylua: ignore
@@ -67,8 +63,12 @@ local config = {
     -- these are to remove the defaults
     lualine_a = {},
     lualine_b = {},
-    lualine_y = {},
-    lualine_z = {},
+		lualine_y = {
+			{ require("recorder").displaySlots },
+		},
+		lualine_z = {
+			{ require("recorder").recordingStatus },
+		},
     lualine_c = {},
     lualine_x = {},
   },
@@ -190,18 +190,18 @@ ins_right {
   color = { fg = colors.green, gui = 'bold' },
 }
 
-ins_right {
-  'fileformat',
-  fmt = string.upper,
-  icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-  color = { fg = colors.green, gui = 'bold' },
-}
-
-ins_right {
-  'branch',
-  icon = '',
-  color = { fg = colors.violet, gui = 'bold' },
-}
+-- ins_right {
+--   'fileformat',
+--   fmt = string.upper,
+--   icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+--   color = { fg = colors.green, gui = 'bold' },
+-- }
+--
+-- ins_right {
+--   'branch',
+--   icon = '',
+--   color = { fg = colors.violet, gui = 'bold' },
+-- }
 
 ins_right {
   'diff',

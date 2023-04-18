@@ -11,7 +11,7 @@ void operator""_p(const char *str, size_t size) {
 
 int main() {
 
-	"aaa"_p;
+"aaa"_p;
 	cout << "aaa" << endl;
 	return 0;
 }

@@ -6,7 +6,8 @@
         "unused-function",
         "undefined-field",
         "different-requires",
-        "redefined-local"
+        "redefined-local",
+        "redundant-parameter"
     ],
     "Lua.diagnostics.globals": [
         "vim",
