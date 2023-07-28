@@ -3,6 +3,7 @@ require("lsp.lspsage")
 require("lsp.format")
 require('lsp.vimtex')
 require('lsp.lspconfig')
+require('lsp.lsphint')
 
 
 require("mason").setup({
@@ -19,7 +20,6 @@ require("mason").setup({
 local servers = {
 	'rust_analyzer',
 	'tsserver',
-	"clangd",
 	"pyright",
 	"cmake",
 	"lua_ls",
