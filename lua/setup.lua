@@ -59,7 +59,6 @@ require("lazy").setup({
 
 	---------- color theme plugins ----------
 	'navarasu/onedark.nvim',
-	{ 'projekt0n/github-nvim-theme', lazy = true,version = 'v0.0.*' },
 	-- 'Th3Whit3Wolf/one-nvim',
 	-- 更好的高亮
 	{ 'nvim-treesitter/nvim-treesitter',
@@ -122,6 +121,9 @@ require("lazy").setup({
 					require("trouble").setup()
 			end,
 	},
+	-- config Path: lsp/lsphint.lua
+	"lvimuser/lsp-inlayhints.nvim",
+	"p00f/clangd_extensions.nvim",
 
 ----------- debug Plugins ----------
 	{
@@ -222,7 +224,7 @@ require("lazy").setup({
 	-- 数据库UI
 	{
 		'kristijanhusak/vim-dadbod-ui',
-		lazy = true,
+		lazy = false,
 		dependencies = {
 			'tpope/vim-dadbod',
 		}
@@ -233,3 +235,4 @@ require("lazy").setup({
 	{ "jbyuki/venn.nvim", lazy = true} --draw Ascll
 
 })
+
