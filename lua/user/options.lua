@@ -8,6 +8,10 @@ opt.tabstop = 2
 opt.shiftwidth = 2
 opt.autoindent = true
 
+-- 默认新窗口为 右和下
+opt.splitright = true
+opt.splitbelow = true
+
 -- 补全增强
 vim.o.wildmenu = true
 -- utf8
@@ -65,3 +69,4 @@ autocmd InsertLeave * :silent let fcitx5state=system("fcitx5-remote")[0] | silen
 autocmd InsertEnter * :silent if fcitx5state == 2 | call system("fcitx5-remote -o") | endif
 " au BufWrite * :Autoformat
 ]]
+ 

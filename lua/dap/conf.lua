@@ -6,4 +6,4 @@ require("dap.dap-virtual-text")
 -- language support
 require("dap.dap-go")
 require("dap.dap-cpp")
-require("dap.dap-python")
+-- require("dap.dap-python")

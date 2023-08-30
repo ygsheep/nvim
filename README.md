@@ -68,6 +68,42 @@ Plugin :
 
 `cs+修改+目标`：`cs'"` 将'Text' 改为 "Text"
 
+### C++ Code
+
+
+| key          | translator |
+| :--:         | :--:       |
+| `<leader>ff` | 文件搜索   |
+| `<leader>rf` | 文件搜索   |
+| `<leader>fg` | 文本搜索   |
+| `<leader>rl` | 文本搜索   |
+
+
+| key          | translator   |
+| :--:         | :--:         |
+| `<leader>la` | 代码优化     |
+| `<leader>ld` | 代码错误列表 |
+| `<leader>lo` | 代码结构     |
+
+
+### venn.nvim(画图)
+![running.gif](https://user-images.githubusercontent.com/36175703/130246504-d559f66b-3e2a-4065-90f7-d73bf8147397.gif)
+
+- [venn.nvim](https://github.com/jbyuki/venn.nvim)
+- Draw ASCII diagrams in Neovim.
+
+`set virtualedit=all` or `set ve=all
+`Enables/Disables `<leader>v`
+
+| key  | translator         |
+| :--: | :--:               |
+| `f`  | 画框(ctrl + v选中) |
+| `H`  | 左箭头             |
+| `J`  | 上箭头             |
+| `K`  | 下箭头             |
+| `L`  | 右箭头             |
+
+
 ### 翻译
 
 | KEY          | Translator |

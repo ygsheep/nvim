@@ -11,8 +11,6 @@ def febonacce(k:int)-> Generator[int,None,None]:
         yield a
         a , b = b , a+b
 
-
-
 if __name__ == "__main__":
     for _ in febonacce(10):
         sum = _

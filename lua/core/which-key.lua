@@ -139,7 +139,7 @@ wk.register({
 		f = { "<cmd>lua vim.lsp.buf.format()<CR>", "代码格式化" },
 		i = { ":Mason<CR>", "打开LSP管理器" },
 		u = { ":Lazy<CR>", "Lazy UI" },
-		c = { ":e ~/.config/nvim/init.lua<CR>:Neotree<CR>", "打开配置文件夹📂" },
+		c = { ":e ~/.config/nvim <CR>:Neotree<CR>", "打开配置文件夹📂" },
 		t = { "<cmd>TroubleToggle<CR>", "LSP Trouble" },
 		w = { "<cmd>TroubleToggle workspace_diagnostics<cr>", "workspace" },
 		d = { "<cmd>TroubleToggle document_diagnostics<cr>", "document" },
