@@ -8,22 +8,6 @@ lspconfig.rust_analyzer.setup {
     ['rust-analyzer'] = {},
   },
 }
--- IMPORTANT: make sure to setup neodev BEFORE lspconfig
-require("neodev").setup({
-  -- add any options here, or leave empty to use the default settings
-  library = { plugins = { "nvim-dap-ui" }, types = true },
-})
--- example to setup lua_ls and enable call snippets
-lspconfig.lua_ls.setup({
-  settings = {
-    Lua = {
-      completion = {
-        callSnippet = "Replace"
-      }
-    }
-  }
-})
-
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 -- vim.keymap.set('n', '<space>le', vim.diagnostic.open_float)

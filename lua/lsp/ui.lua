@@ -1,4 +1,3 @@
--- Configure lsp information display style
 local M = {}
 
 M.setup = function()

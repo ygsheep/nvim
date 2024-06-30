@@ -1,30 +1,30 @@
 --   פּ ﯟ   some other good icons
 local kind_icons = {
-  Text = "",
-  Method = "",
-  Function = "󰊕",
+  Text = "",
+  Method = "m",
+  Function = "",
   Constructor = "",
   Field = "",
-  Variable = "",
-  Class = "",
+  Variable = "",
+  Class = "",
   Interface = "",
   Module = "",
-  Property = "",
+  Property = "",
   Unit = "",
-  Value = "",
+  Value = "",
   Enum = "",
-  Keyword = "",
-  Snippet = "󰘦",
-  Color = "",
-  File = "",
+  Keyword = "",
+  Snippet = "",
+  Color = "",
+  File = "",
   Reference = "",
-  Folder = "",
+  Folder = "",
   EnumMember = "",
-  Constant = "",
+  Constant = "",
   Struct = "",
   Event = "",
-  Operator = "",
-  TypeParameter = " ",
+  Operator = "",
+  TypeParameter = "",
 }
 
 local cmp_status_ok, cmp = pcall(require, "cmp")
@@ -37,17 +37,16 @@ if not snip_status_ok then
   return
 end
 
-
 -- 下面会用到这个函数
 local check_backspace = function()
-  local col = vim.fn.col "." - 1
-  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
+  local col = vim.fn.col(".") - 1
+  return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
 end
 
 cmp.setup({
   snippet = {
     expand = function(args)
-      require('luasnip').lsp_expand(args.body)
+      require("luasnip").lsp_expand(args.body)
     end,
   },
   window = {
@@ -55,10 +54,10 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-e>'] = cmp.mapping.abort(),                    -- 取消补全，esc也可以退出
-    ['<CR>'] = cmp.mapping.confirm({ select = false }), -- 回车不补全
+    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-e>"] = cmp.mapping.abort(), -- 取消补全，esc也可以退出
+    ["<CR>"] = cmp.mapping.confirm({ select = false }), -- 回车不补全
 
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -109,36 +108,37 @@ cmp.setup({
   },
   -- 这里重要
   sources = cmp.config.sources({
-    { name = 'luasnip' },
-    { name = 'cmp_luasnip' },
-    { name = 'nvim_lsp' },
-    { name = 'path' },
-    { name = 'buffer' },
-    { name = 'cmp_tabnine' },
+    { name = "luasnip" },
+    { name = "cmp_luasnip" },
+    { name = "nvim_lsp" },
+    { name = "path" },
+    { name = "buffer" },
+    { name = "cmp_tabnine" },
   }),
   -- Set configuration for specific filetype.
-  cmp.setup.filetype('gitcommit', {
+  cmp.setup.filetype("gitcommit", {
     sources = cmp.config.sources({
-      { name = 'cmp_git' }, -- You can specify the `cmp_git` source if you were installed it.
+      { name = "cmp_git" }, -- You can specify the `cmp_git` source if you were installed it.
     }, {
-      { name = 'buffer' },
-    })
+      { name = "buffer" },
+    }),
   }),
 
   -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline({ '/', '?' }, {
+  cmp.setup.cmdline({ "/", "?" }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
-      { name = 'buffer' }
-    }
+      { name = "buffer" },
+    },
   }),
 
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-  cmp.setup.cmdline(':', {
+  cmp.setup.cmdline(":", {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({
-      { name = 'path' }
+      { name = "path" },
     }, {
-      { name = 'cmdline' } })
-  })
+      { name = "cmdline" },
+    }),
+  }),
 })
