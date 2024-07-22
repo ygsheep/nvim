@@ -4,6 +4,8 @@ return {
   build = "cd app && yarn install",
   init = function()
     vim.g.mkdp_filetypes = { "markdown" }
+    -- default browser
+    vim.g.mkdp_browser = "chromium"
   end,
   ft = { "markdown" },
 }
