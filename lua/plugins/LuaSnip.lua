@@ -1,5 +1,4 @@
 return {
-
   -- add symbols-outline
   {
     "simrat39/symbols-outline.nvim",
@@ -33,16 +32,10 @@ return {
     version      = "v2.*",
     -- install jsregexp (optional!).
     build        = "make install_jsregexp",
-    lazy         = true,
     dependencies = {
       "rafamadriz/friendly-snippets",
       "onsails/lspkind.nvim",
     }
-  },
-
-  {
-    'SirVer/ultisnips',
-    dependencies = { 'honza/vim-snippets' },
   },
   {
     "folke/trouble.nvim",
@@ -54,3 +47,5 @@ return {
   },
 
 }
+
+

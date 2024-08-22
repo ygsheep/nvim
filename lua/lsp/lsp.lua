@@ -1,8 +1,8 @@
 require("lsp.ui").setup()
 require("lsp.lspsage")
--- require("lsp.format")
 require("lsp.vimtex")
 require("lsp.lspconfig")
+require("lsp.mysnip")
 
 require("mason").setup({
   ui = {

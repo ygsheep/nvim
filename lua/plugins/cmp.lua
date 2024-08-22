@@ -8,8 +8,7 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
-      -- 'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
-      -- 'tzachar/cmp-tabnine'
+      'saadparwaiz1/cmp_luasnip', -- Snippets source for nvim-cmp
     },
     ---@param opts cmp.ConfigSchema
     opts = function(_, opts)
