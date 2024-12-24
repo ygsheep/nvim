@@ -1,4 +1,9 @@
-require 'nvim-treesitter.configs'.setup {
+local status_ok, _ = pcall(require, "nvim-treesitter")
+if not status_ok then
+	return
+end
+
+local config = {
 	-- 安装 language parser
 	-- :TSInstallInfo 命令查看支持的语言
 	ensure_installed = {
@@ -35,7 +40,7 @@ require 'nvim-treesitter.configs'.setup {
 			node_incremental = '<CR>',
 			node_decremental = '<BS>',
 			scope_incremental = '<TAB>',
-		}
+    }
 	},
 	-- 启用基于Treesitter的代码格式化(=) . NOTE: This is an experimental feature.
 	indent = {
@@ -49,3 +54,4 @@ vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 -- 默认不要折叠
 -- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
 vim.wo.foldlevel = 99
+_.setup(config)

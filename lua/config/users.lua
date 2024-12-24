@@ -1,2 +1,3 @@
 require("core.lualine")
-require("core.blankline")
+require("core.treesitter")
+require("core.which-key")

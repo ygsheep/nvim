@@ -36,5 +36,4 @@ vim.schedule(function()
   require "mappings"
 end)
 
-require("config.users")
-
+require "config.users"

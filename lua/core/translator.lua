@@ -1,4 +1,4 @@
-local status_ok, alpha = pcall(require, "pantran")
+local status_ok, _ = pcall(require, "pantran")
 if not status_ok then
 	return
 end
